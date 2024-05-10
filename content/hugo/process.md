@@ -1,7 +1,7 @@
 ---
-title: "Content Creation and Delivery"
+title: "Content Creation and Delivery Processes"
 date: 2024-05-10T19:44:12+02:00
-draft: true
+draft: false
 weight: 20
 ---
 
@@ -223,7 +223,7 @@ two systems that should be built to handle these two concerns. This proposal add
 issues of large sites with significant traffic, which is different from the web sites I am concerned here, 
 but I will use their terminology nonetheless as it helps clarify the different architectures.
 
-###### Note 3: Lamp Stack
+#### Note 3: Lamp Stack
 The acronym LAMP stands for Linux, Apache, MySQL, PHP ([3]) and is an often used open source stack
 for web applications. PHP runs within the Apache webserver and is connected to a MySQL database.
 Most common CMS are built on this stack - as are Wordpress, Typo3 or Drupal.
@@ -264,6 +264,50 @@ httpd -..->|HTML| browser
 end
 ```
 **Own Deployment Diagram for a CMS like Wordpress, see also (WordPress 2024)**
+
+##### No Editing/Publishing separation
+This diagram includes one editor and two readers. It shows the issue that with a WebApp CMS, editing and publishing is done through the same app, which also means that usually the editing possibility has to be kept open even if the site is not currently changed. 
+```mermaid
+flowchart LR
+subgraph thecms["WebApp CMS"]
+direction LR
+
+
+subgraph Client["Client Side"]
+ed1((Editor))
+re1((Reader))
+re2((Reader))
+  browser1
+  browser2
+  browser3
+end
+
+
+ed1 --> browser1["Browser"]
+re1 --> browser2["Browser"]
+re2 --> browser3["Browser"]
+
+subgraph Server["Server Side"]
+direction TB
+  subgraph webserver["Webserver"]
+    httpd["`**httpd**
+    (e.g. nginx, apache)`"]
+    CMS["CMS: php\n(executed within httpd)"]
+    httpd -..->CMS
+  end
+CMS -..->|SQL|db
+CMS -..->templates
+db[("Database\n(Content)")]
+templates[/HTML Templates/]
+end
+
+browser1 -..->|http| httpd
+
+browser2 -..->|http| httpd
+
+browser3 -..->|http| httpd
+end
+```
 
 [3]: https://de.wikipedia.org/wiki/LAMP_(Softwarepaket)
 
