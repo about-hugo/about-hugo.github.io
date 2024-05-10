@@ -10,7 +10,7 @@ params:
   theme_fork: 
   description: 
 ---
-
+(Theme Tryout) 
 A minimal theme that combined documentation with a blog,
 and has dark/light theme switch. 
 

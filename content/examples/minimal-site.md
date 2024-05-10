@@ -10,6 +10,7 @@ params:
   theme_fork: 
   description: Ugly, but Structure and a dynamic Navigation.
 ---
+(own theme)
 Minimal Site/Minimal Theme is a basic site & theme 
 which has a minimal page structure with header, footer and navigation partials
 and a dynamic recursive navigation that includes the whole structure in the

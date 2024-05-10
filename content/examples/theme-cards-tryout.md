@@ -10,7 +10,7 @@ params:
   theme_fork: 
   description: Huge Theme - based on a modular framework.
 ---
-
+(Theme Tryout) 
 HBStack is is a modular framework for building Hugo pages.
 See https://hbstack.dev/
 

@@ -1,5 +1,5 @@
 ---
-title: "about_hugo"
+title: "about-hugo.github.io"
 date: 2024-05-10T23:28:56+02:00
 draft: false
 weight: 9010
@@ -10,6 +10,6 @@ params:
   theme_fork: https://github.com/about-hugo/hugo-whisper-theme
   description: This Site.
 ---
+(Live Site) 
 
-
-This Web Site is also build with hugo, using the [whisper theme](/examples/whisper-theme).
+This site. This Web Site is also build with hugo, using the [whisper theme](/examples/whisper-theme).

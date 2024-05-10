@@ -9,4 +9,7 @@ contains various repos (with attached github pages) with hugo web site projects:
 
 - all repositories: https://github.com/orgs/about-hugo/repositories
 - List of Hugo Themes: https://themes.gohugo.io/themes
-## Example Sites
+
+All of the theme tryouts can be forked and easily deployed on github - just update the
+baseURL either in the github workflow directly or in the used environment config file.
+

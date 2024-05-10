@@ -10,7 +10,7 @@ params:
   theme_fork: 
   description: 
 ---
-
+(misc)
 Wiki to Hugo is a repo to try out creating content using a github wiki.
 
 Github Wikis are repositories themselves, with pages that can be edited in markdown

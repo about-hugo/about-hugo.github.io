@@ -12,7 +12,7 @@ params:
 
 tags: [bootstrap, doc, minimal]
 ---
-
+(Theme Tryout) 
 The Whisper Theme is used for  [this page](/examples/about_hugo)., as well.
 
 <!--more-->

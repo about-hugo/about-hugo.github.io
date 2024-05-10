@@ -11,7 +11,7 @@ params:
   description: Geekdoc is an elegant comprehensive documentation theme based on Bootstrap.
 
 ---
-
+(Theme Tryout) 
 Geekdoc is an elegant comprehensive documentation theme based on Bootstrap.
 Current recommendation for big documentation sites.
 
