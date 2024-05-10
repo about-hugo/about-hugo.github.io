@@ -1,6 +1,8 @@
 ---
-title: 'Hugo Whisper Docs'
-date: 2018-11-28T15:14:39+10:00
+title: 'About Hugo'
+date: 2024-05-10T10:00:00+02:00
 ---
 
-Whisper is a documentation theme built with Hugo. The design and functionality is intentionally minimal. 
+This is a hugo web page about creating webpages using the static website generator Hugo.
+
+

@@ -4,6 +4,6 @@ date: 2024-05-10T09:18:57+02:00
 weight: 1
 ---
 
-## Whisper Theme
+## Hugo Static Website Generator
 
-Whisper is a minimal documentation theme for Hugo. The design and functionality is intentionally minimal. We’re aiming for a similar feel to a Github readme.
+[Hugo](https://gohugo.io/) is a static website generator implemented in the [Go Programming Language](https://go.dev/).
