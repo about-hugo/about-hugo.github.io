@@ -1,5 +1,5 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
+title: "Whisper Theme Doc"
 date: {{ .Date }}
 draft: false
 weight: 1000

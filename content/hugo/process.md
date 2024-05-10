@@ -3,6 +3,8 @@ title: "Content Creation and Delivery Processes"
 date: 2024-05-10T19:44:12+02:00
 draft: false
 weight: 20
+params:
+  enable_anchor_link: true
 ---
 
 Most known Web Content Management Systems (like Wordpress, Typo3, Drupal) are Web-Applications
@@ -318,3 +320,11 @@ end
 (Parekh and Fowler 2014): Parekh, Sunit and Fowler, Martin: Two Stack CMS. Building a Two-stack CMS for a global product catalog. Slidedesk, 6.10.2014, https://martinfowler.com/articles/two-stack-cms/ , accessed 10.5.2024
 
 (WordPress 2024): Advanced Administration Handbook. Technical Documentation 28.3.2023-21.2.2024, https://developer.wordpress.org/advanced-administration/ , accessed 10.5.2024
+
+--
+## Diagrams on this site are build with goat and mermaid:
+[- https://gohugo.io/content-management/diagrams/](https://gohugo.io/content-management/diagrams/#goat-diagrams-ascii)
+https://github.com/bep/goat
+- https://gohugo.io/content-management/diagrams/
+- Flowcharts Syntax | Mermaid: https://mermaid.js.org/syntax/flowchart.html#thick-link
+- Online FlowChart & Diagrams Editor - Mermaid Live Editor: https://mermaid.live/

@@ -1,8 +1,10 @@
 ---
-title: 'Overview'
+title: 'Whispher Theme Doc'
 date: 2018-11-28T15:14:39+10:00
 weight: 1
 ---
+
+This is the original theme documentation that was included in the example page.
 
 ## Whisper Theme
 

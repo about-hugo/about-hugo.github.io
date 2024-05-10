@@ -22,18 +22,18 @@ summaryLength = 30
     weight = 1
 
 [[menu.main]]
-    name = "Hugo"
+    name = "About Hugo"
     url = "/hugo/"
     weight = 10
 
 [[menu.main]]
-    name = "Docs"
+    name = "Whisper Theme Doc"
     url = "/docs/"
     weight = 40
 
 [[menu.main]]
-    name = "A11Y"
-    url = "/accessibility/"
+    name = "Example Sites"
+    url = "/examples/"
     weight = 50
 
 
@@ -47,7 +47,7 @@ summaryLength = 30
   homepage_intro = 'Whisper is a documentation theme built with Hugo. The design and functionality is intentionally minimal.'
   homepage_image = 'images/zero.gif'
 
-  mainSections = ['docs', 'accessibility', 'hugo']
+  mainSections = ['docs', 'examples', 'hugo']
   
   ## You can enable to add anchor links to header elements
   # enable_anchor_link = true
