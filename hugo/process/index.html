@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Content Creation and Delivery Processes - About Hugo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://about-hugo.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.10d2cf1a17539e07c0ec8c2f705d3d628a9d44b7b46f83043da6e749a6759f40.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-hugo">
+      <a href="/hugo/">
+        <span>Hugo</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-a11y">
+      <a href="/accessibility/">
+        <span>A11Y</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://about-hugo.github.io/"><img width="70" height="70" alt="Logo" src="/images/logo.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://about-hugo.github.io/"><img  width="70" height="70" alt="Logo" src="/images/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-hugo">
+      <a href="/hugo/">
+        <span>Hugo</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-a11y">
+      <a href="/accessibility/">
+        <span>A11Y</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Hugo</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://about-hugo.github.io/hugo/overview/">Overview</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://about-hugo.github.io/hugo/process/">Content Creation and Delivery Processes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://about-hugo.github.io/hugo/content/">Editing/Content Creation</a>
+    </li>
+    
+    <li class="">
+      <a href="https://about-hugo.github.io/hugo/deployment/">Deployment</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Content Creation and Delivery Processes</h1>
+<div class="content ">
+  <p>Most known Web Content Management Systems (like Wordpress, Typo3, Drupal) are Web-Applications
+which integrate content editing and publication in one single application. With a static
+site generator, these process steps are divided: Content creation is done on your
+local computer, and content delivery is done by a static web server like nginx or apache.</p>
+<h2 id="editing-publishing-separation">Editing Publishing Separation</h2>
+<p>Fowler and Parekh <a href="#references">(Fowler 2012, Parekh and Fowler 2014)</a> propose a
+separation between editing and publishing of web sites using two
+separate stacks - the content creation stack and the content delivery stack.
+I will use a terminology based on this differentiation. <a href="#note-2-terminology">See the note about terminoloy below.</a></p>
+<h2 id="webapp-cms-content-creation-and-delivery-through-one-software">WebApp CMS: Content Creation and Delivery through one Software</h2>
+<p>With CMS built as Web Apps, e.g. with the LAMP Stack (<a href="#note-3-lamp-stack">see note 3</a>),
+Editing and Publishing is both done through the same App - the &ldquo;CMS&rdquo; like Wordpress, Typo3 etc.:</p>
+<pre class="mermaid">flowchart LR
+subgraph thecms["WebApp CMS"]
+direction LR
+
+
+subgraph Client["Client Side"]
+ed1((Editor))
+re1((Reader))
+re2((Reader))
+  browser1
+  browser2
+  browser3
+end
+
+
+ed1 --> browser1["Browser"]
+re1 --> browser2["Browser"]
+re2 --> browser3["Browser"]
+
+subgraph Server["Server Side"]
+direction TB
+  subgraph webserver["Webserver"]
+    httpd["`
+    **CMS**
+    `"]
+   
+   templates[/HTML Templates/]
+ 
+    httpd -..->templates
+   httpd -..->|SQL|db
+     db[("Database\n(Content)")]
+   
+  end
+
+end
+
+browser1 <-..->|http/HTML| httpd
+
+browser2 <-..->|http/HTML| httpd
+
+browser3 <-..->|http/HTML| httpd
+end
+</pre>
+
+<h2 id="ssg-content-delivery">SSG: Content Delivery</h2>
+<p>With a static site generator like hugo, these processes are split up. The Content Delivery
+can be done by a web server like nginx or apache directly (without executing any scripts), as only static sites need to be served by
+the web server.</p>
+<pre class="mermaid">flowchart 
+
+subgraph ssg["Static Site Generator"]
+direction TB
+subgraph cd["content delivery"]
+subgraph Client["Client Side"]
+re1((Reader))
+re2((Reader))
+  browser2
+  browser3
+
+end
+
+subgraph Server["Server Side"]
+  subgraph webserver["Webserver"]
+    httpd["`
+    **httpd**
+    (nginx, apache)
+    `"]
+   httpd -..->pages
+       pages[/"Complete Website with Content 
+    (HTML, CSS, JS)"/]
+  end
+
+end
+
+re1 --> browser2["Browser"]
+re2 --> browser3["Browser"]
+browser2 <-..->|http/HTML| httpd
+browser3 <-..->|http/HTML| httpd
+
+end
+
+end
+</pre>
+
+<h2 id="ssg-content-creation">SSG: Content Creation</h2>
+<p>With a static site generator, content creation is done by editing text files on the editor&rsquo;s local computer.
+Typical text file formats are markdown for content and HTML templates for the site structure - Go Templates within Hugo. Both can be edited with any Text editor or IDE.</p>
+<pre class="mermaid">flowchart TB
+
+
+subgraph cc["content creation"]
+ed1((Editor))
+
+    content[/"Site Content (Markdown)"/]
+    structure[/"Site Structure (HTML, CSS, JS)"/]
+    hugo["`
+    **HUGO**
+     ⚙️ `"]
+    website[/"Complete Website with Content 
+    (HTML, CSS, JS)"/]
+    content & structure --> hugo
+    hugo --> website
+    ed1 --> content
+ed1 --> structure
+end
+</pre>
+
+<h2 id="ssg-deployment">SSG: Deployment</h2>
+<p>To publish the site generated by the SSG (Hugo), it has to be copied to the web server.
+This can be done with a manual copy, but is usually done with some kind of automated build process.
+See the page on <a href="../deployment">deployment</a>.</p>
+<pre class="mermaid">flowchart TB
+
+
+subgraph ssg["Static Site Generator"]
+direction LR
+
+subgraph cc["content creation"]
+ed1((Editor))
+
+    content[/"Site Content (Markdown)"/]
+    structure[/"Site Structure (HTML, CSS, JS)"/]
+    hugo["`
+    **HUGO**
+     ⚙️ `"]
+    website[/"Complete Website with Content 
+    (HTML, CSS, JS)"/]
+    content & structure --> hugo
+    hugo --> website
+    ed1 --> content
+ed1 --> structure
+end
+website==>|DEPLOYMENT|pages
+
+subgraph cd["content delivery"]
+subgraph Client["Client Side"]
+re1((Reader))
+re2((Reader))
+  browser2
+  browser3
+
+end
+
+subgraph Server["Server Side"]
+  subgraph webserver["Webserver"]
+    httpd["`
+    **httpd**
+    (nginx, apache)
+    `"]
+   httpd -..->pages
+       pages[/"Complete Website with Content 
+    (HTML, CSS, JS)"/]
+  end
+
+end
+
+re1 --> browser2["Browser"]
+re2 --> browser3["Browser"]
+browser2 <-..->|http/HTML| httpd
+browser3 <-..->|http/HTML| httpd
+
+end
+
+
+
+
+
+end
+</pre>
+
+<h3 id="notes">Notes</h3>
+<h6 id="note-1-web-sites-vs-web-apps">Note 1: Web Sites vs. Web Apps</h6>
+<p>Fowler (2012) also points out that some web pages - for example those with user generated content - will
+be edited by many users, as for instance Wikis. I use the following differentiation: A <strong>Web Site</strong> is a collection of Web Pages (single html files) that constitute a unit of published information, and are typically accessible under a specific (sub)domain. They are published by few people, sometimes only one person. <strong>Web Apps</strong> are Applications build with Web Tools, based on the Web Client-Server Model, but apart from this technological similarity, are closer to software (applications) in general. Thus, I would characterize Wikis, Shop Systems and the like as Web Apps, not Web Sites. As with most categorizations, the
+boundaries are not clear cut, but careful differentiations are necessary nonetheless. This website is concerned with the creation of <strong>Web Sites</strong> with the described characteristic of being edited by few and read by many, and content that will be more often read (hopefully) than changed after once being published.</p>
+<h6 id="note-2-terminology">Note 2: Terminology</h6>
+<p>Martin Fowler (2012) proposes the separation of web page editing and publishing.
+He characterizes content management systems (CMS) as a &ldquo;worryingly invasive tool&rdquo;,
+pointing out that CMS often handle the two processes of editing and publishing in one single system,
+while most web pages have a small group of editors and a larger group of readers, with content that,
+once it is published, will only rarely be changed again. (see also <a href="#note-1-web-sites-vs-web-apps">Note 1</a>).</p>
+<p>Parekh and Fowler (2024) use the terms &ldquo;Content Creation Stack&rdquo; and &ldquo;Content Delivery Stack&rdquo; for the
+two systems that should be built to handle these two concerns. This proposal addresses
+issues of large sites with significant traffic, which is different from the web sites I am concerned here,
+but I will use their terminology nonetheless as it helps clarify the different architectures.</p>
+<h4 id="note-3-lamp-stack">Note 3: Lamp Stack</h4>
+<p>The acronym LAMP stands for Linux, Apache, MySQL, PHP (<a href="https://de.wikipedia.org/wiki/LAMP_(Softwarepaket)">3</a>) and is an often used open source stack
+for web applications. PHP runs within the Apache webserver and is connected to a MySQL database.
+Most common CMS are built on this stack - as are Wordpress, Typo3 or Drupal.</p>
+<p>While this is a well-known and powerful stack, it has two main drawbacks for simple web sites:</p>
+<ul>
+<li>it includes the execution of a script on the server side, which may be a security risk and thus requires regular updates.</li>
+<li>a database is required</li>
+<li>both results in a more complex server setup and maintenance if you run your own server, or in significant
+higher provider costs if you use a hosted solution.</li>
+</ul>
+<pre class="mermaid">flowchart LR
+subgraph thecms["WebApp CMS"]
+direction LR
+
+
+subgraph Client
+  browser
+end
+
+subgraph Server
+direction TB
+  subgraph webserver
+    httpd["`**httpd**
+    (e.g. nginx, apache)`"]
+    CMS["CMS: php\n(executed within httpd)"]
+    httpd -..->CMS
+  end
+CMS -..->|SQL|db
+CMS -..->templates
+db[("Database\n(Content)")]
+templates[/HTML Templates/]
+end
+
+browser -..->|http| httpd
+httpd -..->|HTML| browser
+
+end
+</pre>
+
+<p><strong>Own Deployment Diagram for a CMS like Wordpress, see also (WordPress 2024)</strong></p>
+<h5 id="no-editingpublishing-separation">No Editing/Publishing separation</h5>
+<p>This diagram includes one editor and two readers. It shows the issue that with a WebApp CMS, editing and publishing is done through the same app, which also means that usually the editing possibility has to be kept open even if the site is not currently changed.</p>
+<pre class="mermaid">flowchart LR
+subgraph thecms["WebApp CMS"]
+direction LR
+
+
+subgraph Client["Client Side"]
+ed1((Editor))
+re1((Reader))
+re2((Reader))
+  browser1
+  browser2
+  browser3
+end
+
+
+ed1 --> browser1["Browser"]
+re1 --> browser2["Browser"]
+re2 --> browser3["Browser"]
+
+subgraph Server["Server Side"]
+direction TB
+  subgraph webserver["Webserver"]
+    httpd["`**httpd**
+    (e.g. nginx, apache)`"]
+    CMS["CMS: php\n(executed within httpd)"]
+    httpd -..->CMS
+  end
+CMS -..->|SQL|db
+CMS -..->templates
+db[("Database\n(Content)")]
+templates[/HTML Templates/]
+end
+
+browser1 -..->|http| httpd
+
+browser2 -..->|http| httpd
+
+browser3 -..->|http| httpd
+end
+</pre>
+
+<h3 id="references">References</h3>
+<p>(Fowler 2012): Fowler, Martin: Editing Publishing Separation. Blog Article, 24.4.2012, <a href="https://martinfowler.com/bliki/EditingPublishingSeparation.html">https://martinfowler.com/bliki/EditingPublishingSeparation.html</a>, accessed 10.5.2024</p>
+<p>(Parekh and Fowler 2014): Parekh, Sunit and Fowler, Martin: Two Stack CMS. Building a Two-stack CMS for a global product catalog. Slidedesk, 6.10.2014, <a href="https://martinfowler.com/articles/two-stack-cms/">https://martinfowler.com/articles/two-stack-cms/</a> , accessed 10.5.2024</p>
+<p>(WordPress 2024): Advanced Administration Handbook. Technical Documentation 28.3.2023-21.2.2024, <a href="https://developer.wordpress.org/advanced-administration/">https://developer.wordpress.org/advanced-administration/</a> , accessed 10.5.2024</p>
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/about-hugo" target="blank"><img height="20" width="20" src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="#" target="blank"><img height="20" width="20" src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Created by <a class="zerostatic" href="https://bkleinen.github.io/contact/">B. Kleinen</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+
+
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.ec19db7e4836c12e2c5e3697d926bc3e4c22005167d9826aab54feca08f0c093.js"></script>
+  
+
+</body>
+
+</html>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About Hugo on Hugo Whisper Theme</title>
+    <title>About Hugo</title>
     <link>https://about-hugo.github.io/</link>
-    <description>Recent content in About Hugo on Hugo Whisper Theme</description>
+    <description>Recent content on About Hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Feb 2019 19:30:08 +1000</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2024 22:49:06 +0200</lastBuildDate>
     <atom:link href="https://about-hugo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Hugo</title>
@@ -63,6 +63,34 @@
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
       <guid>https://about-hugo.github.io/accessibility/example/other/</guid>
       <description>bla bla</description>
+    </item>
+    <item>
+      <title>Overview</title>
+      <link>https://about-hugo.github.io/hugo/overview/</link>
+      <pubDate>Fri, 10 May 2024 10:10:01 +0200</pubDate>
+      <guid>https://about-hugo.github.io/hugo/overview/</guid>
+      <description>&lt;p&gt;As a web static site generator, hugo takes the site structure and the site content (in markdown format) and&#xA;generates a static web site. The complete web site - HTML, CSS, JS in a directory structure - is then copied to the web server, which only needs to serve these static files.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Content Creation and Delivery Processes</title>
+      <link>https://about-hugo.github.io/hugo/process/</link>
+      <pubDate>Fri, 10 May 2024 19:44:12 +0200</pubDate>
+      <guid>https://about-hugo.github.io/hugo/process/</guid>
+      <description>&lt;p&gt;Most known Web Content Management Systems (like Wordpress, Typo3, Drupal) are Web-Applications&#xA;which integrate content editing and publication in one single application. With a static&#xA;site generator, these process steps are divided: Content creation is done on your&#xA;local computer, and content delivery is done by a static web server like nginx or apache.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Editing/Content Creation</title>
+      <link>https://about-hugo.github.io/hugo/content/</link>
+      <pubDate>Fri, 10 May 2024 22:49:06 +0200</pubDate>
+      <guid>https://about-hugo.github.io/hugo/content/</guid>
+      <description>&lt;p&gt;Content Creation in Hugo is done by editing markdown files.&#xA;The site&amp;rsquo;s structure is defined in templates, which are also plain text files.&#xA;Both  are usually put under version control and edited with the same tools&#xA;used in software development.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deployment</title>
+      <link>https://about-hugo.github.io/hugo/deployment/</link>
+      <pubDate>Fri, 10 May 2024 21:13:57 +0200</pubDate>
+      <guid>https://about-hugo.github.io/hugo/deployment/</guid>
+      <description>As for the content creation, software engineering tools are used for deployment.&#xA;This page showcases automated deployment using github actions. On the various example sites and theme tryouts, explore the Actions tab in github and the workflow definitions located in .github/workflows.</description>
     </item>
   </channel>
 </rss>
