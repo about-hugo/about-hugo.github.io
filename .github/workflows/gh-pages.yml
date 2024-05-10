@@ -24,7 +24,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo -b https://about-hugo.github.io/whisper-theme-tryout
+        run: hugo -b https://about-hugo.github.io
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
