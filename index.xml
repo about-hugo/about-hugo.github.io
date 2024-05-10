@@ -30,13 +30,6 @@
       <description>Syntax highlighting and menus can be configured via &lt;code&gt;config.toml&lt;/code&gt;.</description>
     </item>
     <item>
-      <title>Markdown Test page</title>
-      <link>https://about-hugo.github.io/accessibility/specimen/</link>
-      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
-      <guid>https://about-hugo.github.io/accessibility/specimen/</guid>
-      <description>Markdown Test Page Headings Paragraphs Blockquotes Lists Horizontal rule Table Code Inline elements Headings Heading one Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem.&#xA;Heading two Aute officia nulla deserunt do deserunt cillum velit magna. Officia veniam culpa anim minim dolore labore pariatur voluptate id ad est duis quis velit dolor pariatur enim.</description>
-    </item>
-    <item>
       <title>Specimen</title>
       <link>https://about-hugo.github.io/docs/specimen/</link>
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
@@ -49,20 +42,6 @@
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
       <guid>https://about-hugo.github.io/docs/example/</guid>
       <description>&lt;p&gt;Whisper is a minimal documentation theme built for Hugo. The design &amp;amp; functionality is intentionally minimal.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>example.md</title>
-      <link>https://about-hugo.github.io/accessibility/example/example/</link>
-      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
-      <guid>https://about-hugo.github.io/accessibility/example/example/</guid>
-      <description>bla bla</description>
-    </item>
-    <item>
-      <title>other.md</title>
-      <link>https://about-hugo.github.io/accessibility/example/other/</link>
-      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
-      <guid>https://about-hugo.github.io/accessibility/example/other/</guid>
-      <description>bla bla</description>
     </item>
     <item>
       <title>Overview</title>
