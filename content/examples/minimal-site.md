@@ -1,8 +1,8 @@
 ---
 title: "Minimal Site & Theme"
 date: 2024-05-11T00:27:16+02:00
-draft: true
-weight: 1000
+draft: false
+weight: 2010
 params:
   github:  https://github.com/about-hugo/minimal-site
   demo: https://about-hugo.github.io/minimal-site/

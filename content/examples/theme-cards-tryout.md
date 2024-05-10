@@ -1,7 +1,8 @@
 ---
 title: "Theme Cards Tryout"
 date: 2024-05-11T00:18:25+02:00
-draft: true
+draft: false
+weight: 3010
 params:
   github: https://github.com/about-hugo/theme-cards-tryout
   demo: https://about-hugo.github.io/theme-cards-tryout

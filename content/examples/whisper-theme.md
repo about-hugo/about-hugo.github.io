@@ -1,7 +1,8 @@
 ---
 title: "Whisper Theme Tryout"
 date: 2024-05-10T23:12:55+02:00
-draft: true
+draft: false
+weight: 3010
 params:
   github: https://github.com/about-hugo/whisper-theme-tryout
   demo: https://about-hugo.github.io/whisper-theme-tryout/
