@@ -1,4 +1,4 @@
-baseURL = "localhost:1313/whisper-theme-tryout"
+baseURL = "/"
 theme = "hugo-whisper-theme"
 languageCode = "en-us"
 title = "Hugo Whisper Theme"
@@ -31,6 +31,13 @@ summaryLength = 30
     url = "/accessibility/"
     weight = 3
 
+
+
+[[menu.main]]
+    name = "Hugo"
+    url = "/hugo/"
+    weight = 30
+
 [params]
   google_analytics_id=""
   homepage_button_link = '/docs'
@@ -38,7 +45,7 @@ summaryLength = 30
   homepage_intro = 'Whisper is a documentation theme built with Hugo. The design and functionality is intentionally minimal.'
   homepage_image = 'images/terminal.gif'
 
-  mainSections = ['docs', 'accessibility']
+  mainSections = ['docs', 'accessibility', 'hugo']
   
   ## You can enable to add anchor links to header elements
   # enable_anchor_link = true
