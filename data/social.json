@@ -1,12 +1,12 @@
 [
     {
         "name": "Github",
-        "link": "https://github.com/zerostaticthemes/hugo-whisper-theme",
+        "link": "https://github.com/about-hugo",
         "image": "images/social/github.svg"
     },
     {
         "name": "Twitter",
-        "link": "https://twitter.com/zerostaticio",
+        "link": "#",
         "image": "images/social/twitter.svg"
     }
 ]

@@ -22,28 +22,30 @@ summaryLength = 30
     weight = 1
 
 [[menu.main]]
+    name = "Hugo"
+    url = "/hugo/"
+    weight = 100
+
+[[menu.main]]
     name = "Docs"
     url = "/docs/"
-    weight = 2
+    weight = 40
 
 [[menu.main]]
     name = "A11Y"
     url = "/accessibility/"
-    weight = 3
+    weight = 50
 
 
 
-[[menu.main]]
-    name = "Hugo"
-    url = "/hugo/"
-    weight = 30
+
 
 [params]
   google_analytics_id=""
-  homepage_button_link = '/docs'
-  homepage_button_text = 'Read The Docs'
+  homepage_button_link = '/hugo'
+  homepage_button_text = 'Get Started'
   homepage_intro = 'Whisper is a documentation theme built with Hugo. The design and functionality is intentionally minimal.'
-  homepage_image = 'images/terminal.gif'
+  homepage_image = 'images/zero.gif'
 
   mainSections = ['docs', 'accessibility', 'hugo']
   
@@ -66,4 +68,4 @@ summaryLength = 30
       standard  = "images/logo.svg"
 
   [params.footer]
-    copyright_text = 'Free Hugo theme by <a class="zerostatic" href="https://www.zerostatic.io">Zerostatic Themes</a>'
+    copyright_text = 'Created by <a class="zerostatic" href="https://bkleinen.github.io/contact/">B. Kleinen</a>'
