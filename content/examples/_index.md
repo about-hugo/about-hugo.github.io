@@ -4,5 +4,9 @@ date: 2024-05-10T23:12:55+02:00
 weight: 1
 ---
 
-## Theme Tryouts
+The github organization [https://github.com/about-hugo](https://github.com/about-hugo)
+contains various repos (with attached github pages) with hugo web site projects:
+
+- all repositories: https://github.com/orgs/about-hugo/repositories
+- List of Hugo Themes: https://themes.gohugo.io/themes
 ## Example Sites
