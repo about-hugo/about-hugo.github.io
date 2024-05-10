@@ -6,63 +6,70 @@
     <description>Recent content in Hugo Examples and Theme Tryouts on About Hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2024 01:16:47 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2024 01:29:37 +0200</lastBuildDate>
     <atom:link href="https://about-hugo.github.io/examples/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Minimal Site &amp; Theme</title>
       <link>https://about-hugo.github.io/examples/minimal-site/</link>
       <pubDate>Sat, 11 May 2024 00:27:16 +0200</pubDate>
       <guid>https://about-hugo.github.io/examples/minimal-site/</guid>
-      <description>Minimal Site/Minimal Theme is a basic site &amp;amp; theme which has a minimal page structure with header, footer and navigation partials and a dynamic recursive navigation that includes the whole structure in the content/ file tree.&#xA;Minimal-Theme is directly included in the repo.</description>
+      <description>(own theme) Minimal Site/Minimal Theme is a basic site &amp;amp; theme which has a minimal page structure with header, footer and navigation partials and a dynamic recursive navigation that includes the whole structure in the content/ file tree.&#xA;Minimal-Theme is directly included in the repo.</description>
     </item>
     <item>
       <title>Doks Tryout</title>
       <link>https://about-hugo.github.io/examples/doks-tryout/</link>
       <pubDate>Sat, 11 May 2024 01:03:34 +0200</pubDate>
       <guid>https://about-hugo.github.io/examples/doks-tryout/</guid>
-      <description>A minimal theme that combined documentation with a blog, and has dark/light theme switch.&#xA;Not very smooth to work with, maybe just because of the confusing permalinks?</description>
+      <description>(Theme Tryout) A minimal theme that combined documentation with a blog, and has dark/light theme switch.&#xA;Not very smooth to work with, maybe just because of the confusing permalinks?</description>
     </item>
     <item>
       <title>Theme Cards Tryout</title>
       <link>https://about-hugo.github.io/examples/theme-cards-tryout/</link>
       <pubDate>Sat, 11 May 2024 00:18:25 +0200</pubDate>
       <guid>https://about-hugo.github.io/examples/theme-cards-tryout/</guid>
-      <description>HBStack is is a modular framework for building Hugo pages. See https://hbstack.dev/&#xA;Theme home page: https://theme-cards.hbstack.dev/</description>
+      <description>(Theme Tryout) HBStack is is a modular framework for building Hugo pages. See https://hbstack.dev/&#xA;Theme home page: https://theme-cards.hbstack.dev/</description>
     </item>
     <item>
       <title>Whisper Theme Tryout</title>
       <link>https://about-hugo.github.io/examples/whisper-theme/</link>
       <pubDate>Fri, 10 May 2024 23:12:55 +0200</pubDate>
       <guid>https://about-hugo.github.io/examples/whisper-theme/</guid>
-      <description>&lt;p&gt;The Whisper Theme is used for  &lt;a href=&#34;https://about-hugo.github.io/examples/about_hugo&#34;&gt;this page&lt;/a&gt;., as well.&lt;/p&gt;</description>
+      <description>&lt;p&gt;(Theme Tryout)&#xA;The Whisper Theme is used for  &lt;a href=&#34;https://about-hugo.github.io/examples/about_hugo&#34;&gt;this page&lt;/a&gt;., as well.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo Geekdoc Tryout</title>
       <link>https://about-hugo.github.io/examples/hugo-geekdoc-tryout/</link>
       <pubDate>Sat, 11 May 2024 00:38:31 +0200</pubDate>
       <guid>https://about-hugo.github.io/examples/hugo-geekdoc-tryout/</guid>
-      <description>Geekdoc is an elegant comprehensive documentation theme based on Bootstrap. Current recommendation for big documentation sites.&#xA;Created theme fork with pull request to update node version:</description>
+      <description>(Theme Tryout) Geekdoc is an elegant comprehensive documentation theme based on Bootstrap. Current recommendation for big documentation sites.&#xA;Created theme fork with pull request to update node version:</description>
     </item>
     <item>
       <title>Wiki to Hugo</title>
       <link>https://about-hugo.github.io/examples/wiki-to-hugo/</link>
       <pubDate>Sat, 11 May 2024 00:32:58 +0200</pubDate>
       <guid>https://about-hugo.github.io/examples/wiki-to-hugo/</guid>
-      <description>Wiki to Hugo is a repo to try out creating content using a github wiki.&#xA;Github Wikis are repositories themselves, with pages that can be edited in markdown format.&#xA;This makes them an option for first collaborative markdown content creation before a website is set up.</description>
+      <description>(misc) Wiki to Hugo is a repo to try out creating content using a github wiki.&#xA;Github Wikis are repositories themselves, with pages that can be edited in markdown format.&#xA;This makes them an option for first collaborative markdown content creation before a website is set up.</description>
     </item>
     <item>
-      <title>about_hugo</title>
-      <link>https://about-hugo.github.io/examples/about_hugo/</link>
+      <title>Showtime Website</title>
+      <link>https://about-hugo.github.io/examples/showtime-website/</link>
+      <pubDate>Sat, 11 May 2024 01:29:37 +0200</pubDate>
+      <guid>https://about-hugo.github.io/examples/showtime-website/</guid>
+      <description>(Live Site)&#xA;The IMI Showtime Website was created during the pandemic to replace the Showtime Fair. It will be continued to be used as a documentation tool.</description>
+    </item>
+    <item>
+      <title>about-hugo.github.io</title>
+      <link>https://about-hugo.github.io/examples/about-hugo-github-io/</link>
       <pubDate>Fri, 10 May 2024 23:28:56 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/about_hugo/</guid>
-      <description>This Web Site is also build with hugo, using the whisper theme.</description>
+      <guid>https://about-hugo.github.io/examples/about-hugo-github-io/</guid>
+      <description>(Live Site)&#xA;This site. This Web Site is also build with hugo, using the whisper theme.</description>
     </item>
     <item>
       <title>bkleinen.github.io</title>
       <link>https://about-hugo.github.io/examples/bkleinen-github-io/</link>
       <pubDate>Sat, 11 May 2024 01:16:47 +0200</pubDate>
       <guid>https://about-hugo.github.io/examples/bkleinen-github-io/</guid>
-      <description>https://bkleinen.github.io/</description>
+      <description>(Live Site)&#xA;My HTW Homepage.</description>
     </item>
   </channel>
 </rss>
