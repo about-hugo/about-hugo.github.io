@@ -1,7 +1,7 @@
 baseURL = "/"
 theme = "hugo-whisper-theme"
 languageCode = "en-us"
-title = "Hugo Whisper Theme"
+title = "About Hugo"
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
@@ -24,7 +24,7 @@ summaryLength = 30
 [[menu.main]]
     name = "Hugo"
     url = "/hugo/"
-    weight = 100
+    weight = 10
 
 [[menu.main]]
     name = "Docs"
@@ -69,3 +69,11 @@ summaryLength = 30
 
   [params.footer]
     copyright_text = 'Created by <a class="zerostatic" href="https://bkleinen.github.io/contact/">B. Kleinen</a>'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      footnote = true
+      table = true
+      taskList = true
+  
