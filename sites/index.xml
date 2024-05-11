@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sites on About Hugo</title>
+    <link>https://about-hugo.github.io/sites/</link>
+    <description>Recent content in Sites on About Hugo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 May 2024 16:43:48 +0200</lastBuildDate>
+    <atom:link href="https://about-hugo.github.io/sites/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Showtime Website</title>
+      <link>https://about-hugo.github.io/sites/showtime-website/</link>
+      <pubDate>Sat, 11 May 2024 01:29:37 +0200</pubDate>
+      <guid>https://about-hugo.github.io/sites/showtime-website/</guid>
+      <description>&lt;p&gt;The IMI Showtime Website was created during the pandemic to replace the&#xA;Showtime Fair.&lt;/p&gt;&#xA;&lt;p&gt;Now, as the showtime is back to it&amp;rsquo;s original format, it will will be continued&#xA;to supplement the showtime as event home page and project archive.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>about-hugo.github.io</title>
+      <link>https://about-hugo.github.io/sites/about-hugo-github-io/</link>
+      <pubDate>Fri, 10 May 2024 23:28:56 +0200</pubDate>
+      <guid>https://about-hugo.github.io/sites/about-hugo-github-io/</guid>
+      <description>&lt;p&gt;This site. This Web Site is also build with hugo, using the &lt;a href=&#34;https://about-hugo.github.io/examples/whisper-theme&#34;&gt;whisper theme&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Queer HTW</title>
+      <link>https://about-hugo.github.io/sites/queer-htw/</link>
+      <pubDate>Sat, 11 May 2024 10:10:15 +0200</pubDate>
+      <guid>https://about-hugo.github.io/sites/queer-htw/</guid>
+      <description>&lt;p&gt;Little Site for the HTW Queer Employees Network based on theme-console.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>bkleinen.github.io</title>
+      <link>https://about-hugo.github.io/sites/bkleinen-github-io/</link>
+      <pubDate>Sat, 11 May 2024 01:16:47 +0200</pubDate>
+      <guid>https://about-hugo.github.io/sites/bkleinen-github-io/</guid>
+      <description>&lt;p&gt;My HTW Homepage contains all information about my classes and other HTW related stuff.&#xA;I&amp;rsquo;ve created an own theme based on bootstrap for it.&lt;/p&gt;&#xA;&lt;p&gt;It contains more than 10 years of history, see &lt;a href=&#34;https://home.htw-berlin.de/~kleinen/classes/&#34;&gt;https://home.htw-berlin.de/~kleinen/classes/&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

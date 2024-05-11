@@ -6,7 +6,7 @@
     <description>Recent content on About Hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2024 16:34:20 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2024 16:43:48 +0200</lastBuildDate>
     <atom:link href="https://about-hugo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Hugo</title>
@@ -79,6 +79,13 @@
       <description>&lt;p&gt;As a web static site generator, hugo takes the site structure and the site content (in markdown format) and&#xA;generates a static web site. The complete web site - HTML, CSS, JS in a directory structure - is then copied to the web server, which only needs to serve these static files.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>About the Project</title>
+      <link>https://about-hugo.github.io/about/project/</link>
+      <pubDate>Sat, 11 May 2024 13:19:27 +0200</pubDate>
+      <guid>https://about-hugo.github.io/about/project/</guid>
+      <description>I&amp;rsquo;ve created this project to collect all the various hugo examples I&amp;rsquo;ve created over the last several years, to document and establish their usage as a learning tool in my various software development and web technology classes.&#xA;Currently - as of May 2024 - it&amp;rsquo;s work in progress. Contributions are Welcome!&#xA;How to Contribute As a Hugo project, creation and collaboration on this site is very similar to an open source software project.</description>
+    </item>
+    <item>
       <title>Hugo Bare Theme</title>
       <link>https://about-hugo.github.io/examples/hugo-bare-theme/</link>
       <pubDate>Sat, 11 May 2024 11:39:05 +0200</pubDate>
@@ -105,6 +112,13 @@
       <pubDate>Fri, 10 May 2024 19:44:12 +0200</pubDate>
       <guid>https://about-hugo.github.io/hugo/process/</guid>
       <description>&lt;p&gt;Most known Web Content Management Systems (like Wordpress, Typo3, Drupal) are Web-Applications&#xA;which integrate content editing and publication in one single application. With a static&#xA;site generator, these process steps are divided: Content creation is done on your&#xA;local computer, and content delivery is done by a static web server like nginx or apache.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Queer HTW</title>
+      <link>https://about-hugo.github.io/sites/queer-htw/</link>
+      <pubDate>Sat, 11 May 2024 10:10:15 +0200</pubDate>
+      <guid>https://about-hugo.github.io/sites/queer-htw/</guid>
+      <description>&lt;p&gt;Little Site for the HTW Queer Employees Network based on theme-console.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Doks Theme Tryout</title>
