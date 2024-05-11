@@ -22,32 +22,43 @@ summaryLength = 30
     weight = 1
 
 [[menu.main]]
-    name = "About Hugo"
-    url = "/hugo/"
+    name = "About"
+    url = "/about/"
     weight = 10
 
 [[menu.main]]
-    name = "Whisper Theme Doc"
-    url = "/docs/"
-    weight = 40
+    name = "Hugo"
+    url = "/hugo/"
+    weight = 20
 
 [[menu.main]]
-    name = "Example Sites"
+    name = "Examples"
     url = "/examples/"
+    weight = 30
+ [[menu.main]]
+    name = "Themes"
+    url = "/themes/"
+    weight = 40
+ 
+[[menu.main]]
+    name = "Sites"
+    url = "/sites/"
     weight = 50
 
 
 
 
 
+
 [params]
-  google_analytics_id=""
+  mainSections = ['about', 'hugo', 'examples', 'themes', 'sites']
+
   homepage_button_link = '/hugo'
-  homepage_button_text = 'Get Started'
-  homepage_intro = 'Whisper is a documentation theme built with Hugo. The design and functionality is intentionally minimal.'
+  homepage_button_text = 'Get Started with Hugo'
+  homepage_intro = 'This is shown as long as the homepage has no content'
   homepage_image = 'images/zero.gif'
 
-  mainSections = ['docs', 'examples', 'hugo']
+
   
   ## You can enable to add anchor links to header elements
   # enable_anchor_link = true
