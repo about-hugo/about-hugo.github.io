@@ -1,7 +1,7 @@
 ---
 title: "About the Project"
 date: 2024-05-11T13:19:27+02:00
-draft: true
+draft: false
 weight: 20
 ---
 
