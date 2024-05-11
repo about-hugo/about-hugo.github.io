@@ -6,7 +6,7 @@
     <description>Recent content on About Hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2024 01:29:37 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2024 16:34:20 +0200</lastBuildDate>
     <atom:link href="https://about-hugo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Hugo</title>
@@ -44,6 +44,34 @@
       <description>&lt;p&gt;Whisper is a minimal documentation theme built for Hugo. The design &amp;amp; functionality is intentionally minimal.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Hugo Bare Bones</title>
+      <link>https://about-hugo.github.io/examples/hugo-bare-bones/</link>
+      <pubDate>Sat, 11 May 2024 11:39:05 +0200</pubDate>
+      <guid>https://about-hugo.github.io/examples/hugo-bare-bones/</guid>
+      <description>&lt;p&gt;This is an attempt at the smallest hugo site possible.&#xA;It contains three pages: / (Home), a posts index and a single post.&lt;/p&gt;&#xA;&lt;p&gt;It can be used as a base for first hugo experiments as it is not cluttered&#xA;with complex features or any content.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why SSGs</title>
+      <link>https://about-hugo.github.io/about/why/</link>
+      <pubDate>Sat, 11 May 2024 10:45:56 +0200</pubDate>
+      <guid>https://about-hugo.github.io/about/why/</guid>
+      <description>&lt;p&gt;I advocate for static web site generators (SSGs) as they are an excellent tool&#xA;for web site content creation alone or in a team once you mastered the necessary software engineering skills.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Showtime Website</title>
+      <link>https://about-hugo.github.io/sites/showtime-website/</link>
+      <pubDate>Sat, 11 May 2024 01:29:37 +0200</pubDate>
+      <guid>https://about-hugo.github.io/sites/showtime-website/</guid>
+      <description>&lt;p&gt;The IMI Showtime Website was created during the pandemic to replace the&#xA;Showtime Fair.&lt;/p&gt;&#xA;&lt;p&gt;Now, as the showtime is back to it&amp;rsquo;s original format, it will will be continued&#xA;to supplement the showtime as event home page and project archive.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Whisper Theme Tryout</title>
+      <link>https://about-hugo.github.io/themes/whisper-theme/</link>
+      <pubDate>Fri, 10 May 2024 23:12:55 +0200</pubDate>
+      <guid>https://about-hugo.github.io/themes/whisper-theme/</guid>
+      <description>&lt;p&gt;A sleek, beautiful documentation theme based on bootstrap, which is also&#xA;used for &lt;a href=&#34;https://about-hugo.github.io/sites/about-hugo-github-io/&#34;&gt;this page&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Overview</title>
       <link>https://about-hugo.github.io/hugo/overview/</link>
       <pubDate>Fri, 10 May 2024 10:10:01 +0200</pubDate>
@@ -51,11 +79,60 @@
       <description>&lt;p&gt;As a web static site generator, hugo takes the site structure and the site content (in markdown format) and&#xA;generates a static web site. The complete web site - HTML, CSS, JS in a directory structure - is then copied to the web server, which only needs to serve these static files.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Hugo Bare Theme</title>
+      <link>https://about-hugo.github.io/examples/hugo-bare-theme/</link>
+      <pubDate>Sat, 11 May 2024 11:39:05 +0200</pubDate>
+      <guid>https://about-hugo.github.io/examples/hugo-bare-theme/</guid>
+      <description>&lt;p&gt;This is a tryout of starting a hugo page from scratch using&#xA;&lt;strong&gt;hugo new site  &amp;amp; hugo new theme&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The generated theme contains some example content.&#xA;If you want to create the design of your page yourself, this&#xA;might be a good starting point. (Either this example or following the&#xA;steps to create this example documented in the readme.)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo Geekdoc Theme Tryout</title>
+      <link>https://about-hugo.github.io/themes/hugo-geekdoc-tryout/</link>
+      <pubDate>Sat, 11 May 2024 00:38:31 +0200</pubDate>
+      <guid>https://about-hugo.github.io/themes/hugo-geekdoc-tryout/</guid>
+      <description>&lt;p&gt;Geekdoc is an elegant comprehensive documentation theme based on Bootstrap.&#xA;My current recommendation for big documentation sites, although I haven&amp;rsquo;t done much with it yet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>about-hugo.github.io</title>
+      <link>https://about-hugo.github.io/sites/about-hugo-github-io/</link>
+      <pubDate>Fri, 10 May 2024 23:28:56 +0200</pubDate>
+      <guid>https://about-hugo.github.io/sites/about-hugo-github-io/</guid>
+      <description>&lt;p&gt;This site. This Web Site is also build with hugo, using the &lt;a href=&#34;https://about-hugo.github.io/examples/whisper-theme&#34;&gt;whisper theme&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Content Creation and Delivery Processes</title>
       <link>https://about-hugo.github.io/hugo/process/</link>
       <pubDate>Fri, 10 May 2024 19:44:12 +0200</pubDate>
       <guid>https://about-hugo.github.io/hugo/process/</guid>
       <description>&lt;p&gt;Most known Web Content Management Systems (like Wordpress, Typo3, Drupal) are Web-Applications&#xA;which integrate content editing and publication in one single application. With a static&#xA;site generator, these process steps are divided: Content creation is done on your&#xA;local computer, and content delivery is done by a static web server like nginx or apache.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Doks Theme Tryout</title>
+      <link>https://about-hugo.github.io/themes/doks-tryout/</link>
+      <pubDate>Sat, 11 May 2024 01:03:34 +0200</pubDate>
+      <guid>https://about-hugo.github.io/themes/doks-tryout/</guid>
+      <description>&lt;p&gt;A minimal theme that combines documentation with a blog,&#xA;and has dark/light theme switch.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Minimal Site &amp; Theme</title>
+      <link>https://about-hugo.github.io/examples/minimal-site/</link>
+      <pubDate>Sat, 11 May 2024 00:27:16 +0200</pubDate>
+      <guid>https://about-hugo.github.io/examples/minimal-site/</guid>
+      <description>&lt;p&gt;Minimal Site/Minimal Theme is a basic site &amp;amp; theme&#xA;which has a minimal page structure with header, footer and navigation partials&#xA;and a dynamic recursive navigation that includes the whole structure in the&#xA;content/ file tree.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Wiki to Hugo</title>
+      <link>https://about-hugo.github.io/examples/wiki-to-hugo/</link>
+      <pubDate>Sat, 11 May 2024 00:32:58 +0200</pubDate>
+      <guid>https://about-hugo.github.io/examples/wiki-to-hugo/</guid>
+      <description>&lt;p&gt;Wiki to Hugo is a repo to try out creating content using a github wiki.&lt;/p&gt;&#xA;&lt;p&gt;(not a hugo page!)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Theme Cards Tryout</title>
+      <link>https://about-hugo.github.io/themes/theme-cards-tryout/</link>
+      <pubDate>Sat, 11 May 2024 00:18:25 +0200</pubDate>
+      <guid>https://about-hugo.github.io/themes/theme-cards-tryout/</guid>
+      <description>&lt;p&gt;This is a theme based on HBStack.&#xA;HBStack is is a modular framework for building Hugo pages,&#xA;see &lt;a href=&#34;https://hbstack.dev/&#34;&gt;https://hbstack.dev/&lt;/a&gt;&#xA;Both the framework and theme are massive and seem well-designed and&#xA;powerful; before starting a project with it some time would be&#xA;necessary to explore and evaluate this framework.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Editing/Content Creation</title>
@@ -72,67 +149,11 @@
       <description>As for the content creation, software engineering tools are used for deployment.&#xA;This page showcases automated deployment using github actions. On the various example sites and theme tryouts, explore the Actions tab in github and the workflow definitions located in .github/workflows.</description>
     </item>
     <item>
-      <title>Minimal Site &amp; Theme</title>
-      <link>https://about-hugo.github.io/examples/minimal-site/</link>
-      <pubDate>Sat, 11 May 2024 00:27:16 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/minimal-site/</guid>
-      <description>(own theme) Minimal Site/Minimal Theme is a basic site &amp;amp; theme which has a minimal page structure with header, footer and navigation partials and a dynamic recursive navigation that includes the whole structure in the content/ file tree.&#xA;Minimal-Theme is directly included in the repo.</description>
-    </item>
-    <item>
-      <title>Doks Tryout</title>
-      <link>https://about-hugo.github.io/examples/doks-tryout/</link>
-      <pubDate>Sat, 11 May 2024 01:03:34 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/doks-tryout/</guid>
-      <description>(Theme Tryout) A minimal theme that combined documentation with a blog, and has dark/light theme switch.&#xA;Not very smooth to work with, maybe just because of the confusing permalinks?</description>
-    </item>
-    <item>
-      <title>Theme Cards Tryout</title>
-      <link>https://about-hugo.github.io/examples/theme-cards-tryout/</link>
-      <pubDate>Sat, 11 May 2024 00:18:25 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/theme-cards-tryout/</guid>
-      <description>(Theme Tryout) HBStack is is a modular framework for building Hugo pages. See https://hbstack.dev/&#xA;Theme home page: https://theme-cards.hbstack.dev/</description>
-    </item>
-    <item>
-      <title>Whisper Theme Tryout</title>
-      <link>https://about-hugo.github.io/examples/whisper-theme/</link>
-      <pubDate>Fri, 10 May 2024 23:12:55 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/whisper-theme/</guid>
-      <description>&lt;p&gt;(Theme Tryout)&#xA;The Whisper Theme is used for  &lt;a href=&#34;https://about-hugo.github.io/examples/about_hugo&#34;&gt;this page&lt;/a&gt;., as well.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hugo Geekdoc Tryout</title>
-      <link>https://about-hugo.github.io/examples/hugo-geekdoc-tryout/</link>
-      <pubDate>Sat, 11 May 2024 00:38:31 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/hugo-geekdoc-tryout/</guid>
-      <description>(Theme Tryout) Geekdoc is an elegant comprehensive documentation theme based on Bootstrap. Current recommendation for big documentation sites.&#xA;Created theme fork with pull request to update node version:</description>
-    </item>
-    <item>
-      <title>Wiki to Hugo</title>
-      <link>https://about-hugo.github.io/examples/wiki-to-hugo/</link>
-      <pubDate>Sat, 11 May 2024 00:32:58 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/wiki-to-hugo/</guid>
-      <description>(misc) Wiki to Hugo is a repo to try out creating content using a github wiki.&#xA;Github Wikis are repositories themselves, with pages that can be edited in markdown format.&#xA;This makes them an option for first collaborative markdown content creation before a website is set up.</description>
-    </item>
-    <item>
-      <title>Showtime Website</title>
-      <link>https://about-hugo.github.io/examples/showtime-website/</link>
-      <pubDate>Sat, 11 May 2024 01:29:37 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/showtime-website/</guid>
-      <description>(Live Site)&#xA;The IMI Showtime Website was created during the pandemic to replace the Showtime Fair. It will be continued to be used as a documentation tool.</description>
-    </item>
-    <item>
-      <title>about-hugo.github.io</title>
-      <link>https://about-hugo.github.io/examples/about-hugo-github-io/</link>
-      <pubDate>Fri, 10 May 2024 23:28:56 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/about-hugo-github-io/</guid>
-      <description>(Live Site)&#xA;This site. This Web Site is also build with hugo, using the whisper theme.</description>
-    </item>
-    <item>
       <title>bkleinen.github.io</title>
-      <link>https://about-hugo.github.io/examples/bkleinen-github-io/</link>
+      <link>https://about-hugo.github.io/sites/bkleinen-github-io/</link>
       <pubDate>Sat, 11 May 2024 01:16:47 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/bkleinen-github-io/</guid>
-      <description>(Live Site)&#xA;My HTW Homepage.</description>
+      <guid>https://about-hugo.github.io/sites/bkleinen-github-io/</guid>
+      <description>&lt;p&gt;My HTW Homepage contains all information about my classes and other HTW related stuff.&#xA;I&amp;rsquo;ve created an own theme based on bootstrap for it.&lt;/p&gt;&#xA;&lt;p&gt;It contains more than 10 years of history, see &lt;a href=&#34;https://home.htw-berlin.de/~kleinen/classes/&#34;&gt;https://home.htw-berlin.de/~kleinen/classes/&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -6,14 +6,14 @@
     <description>Recent content in Minimal on About Hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 May 2024 23:12:55 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2024 16:11:19 +0200</lastBuildDate>
     <atom:link href="https://about-hugo.github.io/tags/minimal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Whisper Theme Tryout</title>
-      <link>https://about-hugo.github.io/examples/whisper-theme/</link>
+      <link>https://about-hugo.github.io/themes/whisper-theme/</link>
       <pubDate>Fri, 10 May 2024 23:12:55 +0200</pubDate>
-      <guid>https://about-hugo.github.io/examples/whisper-theme/</guid>
-      <description>&lt;p&gt;(Theme Tryout)&#xA;The Whisper Theme is used for  &lt;a href=&#34;https://about-hugo.github.io/examples/about_hugo&#34;&gt;this page&lt;/a&gt;., as well.&lt;/p&gt;</description>
+      <guid>https://about-hugo.github.io/themes/whisper-theme/</guid>
+      <description>&lt;p&gt;A sleek, beautiful documentation theme based on bootstrap, which is also&#xA;used for &lt;a href=&#34;https://about-hugo.github.io/sites/about-hugo-github-io/&#34;&gt;this page&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
