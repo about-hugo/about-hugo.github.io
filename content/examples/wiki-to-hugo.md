@@ -18,9 +18,14 @@ Wiki to Hugo is a repo to try out creating content using a github wiki.
 
 ![](/screenshots/big/github-wiki.jpg)
 
-Github Wikis are repositories themselves, with pages that can be edited in markdown
-format. 
+Github Wikis are very simple wikis which can be attached to a github
+repo. As they allow to use github flavoured markdown as their
+content format, they can be a starting point to collect content in a team
+with a minimum setup.
 
-This makes them an option for first collaborative markdown content creation before
-a website is set up.
+Github Wikis are git repositories themselves, which allows for the content to be 
+edited not only online, but also with your local editing tools and using git 
+as a tool for version control and to solve merge conflicts.
 
+With an educational license, they can be created for private repos making them also
+private, which makes them feasible for collection content that may not (yet) be published.
