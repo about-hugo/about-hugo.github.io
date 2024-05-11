@@ -1,8 +1,8 @@
 ---
 title: "Hugo Bare Bones"
 date: 2024-05-11T11:39:05+02:00
-draft: true
-weight: 1000
+draft: false
+weight: 10
 params:
   image: /screenshots/small/hugo-bare-bones.jpg
   github: https://github.com/about-hugo/hugo-bare-bones
@@ -21,10 +21,55 @@ with complex features or any content.
 
 ![](/screenshots/big/hugo-bare-bones.jpg)
 
-See the tree outputs below to see the structure in the source and resulting page.
+See the file trees below to see the structure in the source and resulting page.
 
 The repo
 <!--more-->
+### File Tree right after hugo new site
+
+```
+hugo-bare-bones>tree .
+.
+├── archetypes
+│   └── default.md
+├── assets
+├── content
+├── data
+├── hugo.toml
+├── i18n
+├── layouts
+├── static
+└── themes
+```
+
+### File Tree in finished Site
+```
+hugo-bare-bones>tree .
+.
+├── README.md
+├── archetypes
+│   └── default.md
+├── assets
+├── content
+│   └── posts
+│       ├── _index.md
+│       └── hello.md
+├── data
+├── hugo.toml
+├── i18n
+├── layouts
+│   ├── _default
+│   │   ├── baseof.html
+│   │   ├── list.html
+│   │   └── single.html
+│   └── index.html
+├── static
+└── themes
+    └── bare-bones-theme
+        ├── data
+        └── i18n
+
+```
 ### Hugo Content dir:
 ```
 content

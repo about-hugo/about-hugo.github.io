@@ -2,7 +2,7 @@
 title: "Wiki to Hugo"
 date: 2024-05-11T00:32:58+02:00
 draft: false
-weight: 4010
+weight: 40
 params:
   image: /screenshots/small/github-wiki.jpg
   github: https://github.com/about-hugo/wiki-to-hugo

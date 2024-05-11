@@ -2,7 +2,7 @@
 title: "Minimal Site & Theme"
 date: 2024-05-11T00:27:16+02:00
 draft: false
-weight: 2010
+weight: 30
 params:
   image: /screenshots/small/minimal-site.jpg
   github:  https://github.com/about-hugo/minimal-site
@@ -13,8 +13,7 @@ params:
 ---
 Minimal Site/Minimal Theme is a basic site & theme 
 which has a minimal page structure with header, footer and navigation partials
-and a dynamic recursive navigation that includes the whole structure in the
-content/ file tree.
+and a dynamic recursive navigation that includes the reflects the complete file tree in `content/` file tree.
 <!--more-->
 
 ![](/screenshots/big/minimal-site.jpg)
