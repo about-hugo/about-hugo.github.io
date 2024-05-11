@@ -78,6 +78,33 @@ The hugo command currently used for this site:
 
     hugo -b "http://localhost:$(port)" --enableGitInfo --navigateToChanged --buildDrafts server -p $(port)
 
+```mermaid
+flowchart TD
+subgraph cc["content creation"]
+direction LR
+ed1((Editor))
+
+    content[/"Site Content (Markdown)"/]
+    structure[/"Site Structure (HTML, CSS, JS)"/]
+
+    subgraph hs["hugo server"]
+    hugo["`
+    **HUGO**
+     ⚙️ `"]
+    website[/"Complete Website with Content 
+    (HTML, CSS, JS)"/]
+    end
+
+    content & structure --> hugo
+    hugo --> website
+    ed1 -->|edit|content
+    ed1 -->|edit|structure
+    website -..->|view|ed1
+    
+end
+```
+While editing the site, `hugo server` continuously rebuilds the complete website and provides
+it for preview by via an integrated http server.
 
 ## Markdown
 
