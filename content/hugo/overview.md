@@ -7,8 +7,7 @@ author: bkleinen
 ---
 
 
-As a web static site generator, hugo takes the site structure and the site content (in markdown format) and
-generates a static web site. The complete web site - HTML, CSS, JS in a directory structure - is then copied to the web server, which only needs to serve these static files.
+As a static web site generator, hugo takes the site structure and the site content (in markdown format) and generates the complete web site. The web site - HTML, CSS, JS in a directory structure - is then copied to the web server. The web server then only serves static files, with no need to invoke scripts or to access a database.
 <!--more-->
 
 ## Static Site Generator
