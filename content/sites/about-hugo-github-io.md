@@ -4,6 +4,7 @@ date: 2024-05-10T23:28:56+02:00
 draft: false
 weight: 20
 params:
+  image: /screenshots/small/about-hugo.jpg
   github: https://github.com/about-hugo/about-hugo.github.io
   site: https://about-hugo.github.io/
   theme: https://github.com/zerostaticthemes/hugo-whisper-theme
@@ -12,3 +13,5 @@ params:
 ---
 
 This site. This Web Site is also build with hugo, using the [whisper theme](/examples/whisper-theme).
+<!--more-->
+![](/screenshots/big/about-hugo.jpg)

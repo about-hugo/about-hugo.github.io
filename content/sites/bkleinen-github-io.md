@@ -5,6 +5,7 @@ draft: false
 weight: 100
 type: example
 params:
+  image: /screenshots/small/bkleinen.github.io.jpg
   github: https://github.com/bkleinen/bkleinen.github.io
   site: https://home.htw-berlin.de/~kleinen/
   theme: https://github.com/bkleinen/bkleinen.github.io/tree/main/hugo/themes/greenpage
@@ -25,3 +26,5 @@ all I have to do is commit the changes and then do a
 ```sh
 make deploy
 ```
+
+![](/screenshots/bkleinen.github.io.jpg)

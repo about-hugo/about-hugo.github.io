@@ -1,9 +1,10 @@
 ---
-title: "Hugo Geekdoc Tryout"
+title: "Hugo Geekdoc Theme Tryout"
 date: 2024-05-11T00:38:31+02:00
 draft: false
 weight: 20
 params:
+  image: /screenshots/small/geekdocs-theme.jpg
   github: https://github.com/about-hugo/hugo-geekdoc-tryout
   demo: https://about-hugo.github.io/hugo-geekdoc-tryout/
   theme: https://github.com/thegeeklab/hugo-geekdoc
@@ -16,6 +17,8 @@ Geekdoc is an elegant comprehensive documentation theme based on Bootstrap.
 My current recommendation for big documentation sites, although I haven't done much with it yet.
 
 <!--more-->
+
+![](/screenshots/big/geekdocs-theme.jpg)
 
 ## A Note on including the theme:
 
