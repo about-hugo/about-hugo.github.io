@@ -321,10 +321,3 @@ end
 
 (WordPress 2024): Advanced Administration Handbook. Technical Documentation 28.3.2023-21.2.2024, https://developer.wordpress.org/advanced-administration/ , accessed 10.5.2024
 
---
-## Diagrams on this site are build with goat and mermaid:
-[- https://gohugo.io/content-management/diagrams/](https://gohugo.io/content-management/diagrams/#goat-diagrams-ascii)
-https://github.com/bep/goat
-- https://gohugo.io/content-management/diagrams/
-- Flowcharts Syntax | Mermaid: https://mermaid.js.org/syntax/flowchart.html#thick-link
-- Online FlowChart & Diagrams Editor - Mermaid Live Editor: https://mermaid.live/
