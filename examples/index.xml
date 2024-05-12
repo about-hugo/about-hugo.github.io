@@ -6,7 +6,7 @@
     <description>Recent content in Hugo Examples and Theme Tryouts on About Hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2024 22:45:03 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2024 03:00:13 +0200</lastBuildDate>
     <atom:link href="https://about-hugo.github.io/examples/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo Bare Bones</title>
@@ -27,7 +27,7 @@
       <link>https://about-hugo.github.io/examples/minimal-site/</link>
       <pubDate>Sat, 11 May 2024 00:27:16 +0200</pubDate>
       <guid>https://about-hugo.github.io/examples/minimal-site/</guid>
-      <description>&lt;p&gt;Minimal Site/Minimal Theme is a basic site &amp;amp; theme&#xA;which has a minimal page structure with header, footer and navigation partials&#xA;and a dynamic recursive navigation that includes the reflects the complete file tree in &lt;code&gt;content/&lt;/code&gt; file tree.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Minimal Site/Minimal Theme is a basic site &amp;amp; theme&#xA;which has a minimal page structure with header, footer and navigation partials&#xA;and a dynamic recursive navigation which reflects the complete &lt;code&gt;content/&lt;/code&gt; file tree.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Wiki to Hugo</title>
