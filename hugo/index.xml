@@ -6,7 +6,7 @@
     <description>Recent content in Hugo Introduction on About Hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 May 2024 11:44:23 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2024 12:03:47 +0200</lastBuildDate>
     <atom:link href="https://about-hugo.github.io/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quick Start</title>
@@ -42,6 +42,13 @@
       <pubDate>Fri, 10 May 2024 21:13:57 +0200</pubDate>
       <guid>https://about-hugo.github.io/hugo/deployment/</guid>
       <description>&lt;p&gt;A Hugo site is published by copying it (deploying it) to any web server which&#xA;then makes it available to the readers (via the http protocol, the delivery).&#xA;A web server is a machine running http server software like &lt;a href=&#34;https://httpd.apache.org/&#34;&gt;Apache&lt;/a&gt; or &lt;a href=&#34;https://www.nginx.com/&#34;&gt;NGINX&lt;/a&gt;.The deployment can be automated using Continuous Deployment practices.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Online Editing</title>
+      <link>https://about-hugo.github.io/hugo/online/</link>
+      <pubDate>Sun, 12 May 2024 11:51:59 +0200</pubDate>
+      <guid>https://about-hugo.github.io/hugo/online/</guid>
+      <description>&lt;p&gt;Using the online editing function of GitHub, Hugo sites become&#xA;&amp;ldquo;real&amp;rdquo; CMS-Systems.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Quick Start - About Hugo</title>
+  <title>Online Editing - About Hugo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://about-hugo.github.io/favicon.png">
@@ -146,7 +146,7 @@
   <h4>Hugo</h4>
   <ul>
     
-    <li class="active ">
+    <li class="">
       <a href="https://about-hugo.github.io/hugo/quick/">Quick Start</a>
     </li>
     
@@ -166,7 +166,7 @@
       <a href="https://about-hugo.github.io/hugo/deployment/">Publishing (Content Delivery)</a>
     </li>
     
-    <li class="">
+    <li class="active ">
       <a href="https://about-hugo.github.io/hugo/online/">Online Editing</a>
     </li>
     
@@ -177,51 +177,22 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Quick Start</h1>
+<h1 class="title">Online Editing</h1>
 <div class="content ">
   
-  <p>You can quickly get started with a deployed site on github by forking
-one of the example sites.</p>
-<ol>
-<li>Fork one of the <a href="/examples">Example</a> or <a href="/themes">Theme Tryout</a> sites</li>
-<li>Enable workflows for the fork</li>
-<li>Trigger a workflow run</li>
-<li>Enable gh pages for your repo</li>
-<li>Clone your repo to your computer</li>
-<li>Install Hugo</li>
-<li>Call hugo server</li>
-</ol>
-<h5 id="1-fork-one-of-the-exampleexamples-or-theme-tryoutthemes-sites">1. Fork one of the <a href="/examples">Example</a> or <a href="/themes">Theme Tryout</a> sites</h5>
-<p>Go to the github repo of the example/theme tryout and click fork: <img src="./fork.jpg" alt=""></p>
-<h5 id="2-enable-workflows-for-the-fork">2. Enable workflows for the fork</h5>
-<p>In your own (forked) repo, go to the Actions section, then enable workflows:
-<img src="./enable-workflows.jpg" alt=""></p>
-<h5 id="3-trigger-a-workflow-run">3. Trigger a workflow run</h5>
-<p>go to the Actions section. If the workflow has a manual run button, run it:
-<img src="./run-workflow.jpg" alt=""> - this creates the gh-pages branch which is needed
-to enable github pages. You can also trigger a build by pushing to the repo.</p>
-<h5 id="4-enable-gh-pages-for-your-repo">4. Enable gh pages for your repo</h5>
-<p>Go to settings/pages and
-choose &ldquo;deploy from branch&rdquo;. To be able to do so, the gh-pages branch must have been
-created beforehand.
-<img src="./deploy-from-branch.jpg" alt=""></p>
-<p>After this, the page should start to build. To check this, go to the gh actions page. You
-should see the first page deployment in progress:</p>
-<p><img src="./pages-build-and-deployment.jpg" alt=""></p>
-<h5 id="5-clone-your-repo-to-your-computer">5. Clone your repo to your computer</h5>
-<p>git clone &hellip;.</p>
-<h5 id="6-install-hugo">6. Install Hugo</h5>
-<p>See  Installation | Hugo: <a href="https://gohugo.io/installation/">https://gohugo.io/installation/</a></p>
-<h5 id="7-call-hugo-server">7. Call hugo server</h5>
-<p>cd into your local copy and run</p>
-<pre><code>hugo server
-</code></pre>
-<p>Have fun!</p>
-<h2 id="further-reading">Further Reading</h2>
-<ul>
-<li>Quick start | Hugo: <a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></li>
-<li>Getting started | Hugo: <a href="https://gohugo.io/getting-started/">https://gohugo.io/getting-started/</a></li>
-</ul>
+  <p>Using the online editing function of GitHub, Hugo sites become
+&ldquo;real&rdquo; CMS-Systems.</p>
+<p>GitHub allows you to edit the content repos you have write access to
+via their webpage. (look out for the pen symbol!)</p>
+<p>For saving, GitHub generates a new commit directly in the GH repo.</p>
+<p>This can be used for online-editing of the hugo sites. To try this out,
+you need to fork one of the examples - as you will need to edit the repo!
+Find the github repo url in the config and set it to your correct repo name.</p>
+<p>With a pages build and deploy on each push in place, the site will
+automatically updated after such a change.</p>
+<p>The <a href="/themes/docsy">Docsy</a> Theme makes good usage of this, it even allows to
+create new pages! See for example <a href="https://about-hugo.github.io/theme-tryout-docsy/blog/">https://about-hugo.github.io/theme-tryout-docsy/blog/</a></p>
+<p>The <a href="/examples/minimal-site">Minimal-Site</a> example also has edit links for each part of the site structure.</p>
 </div>
 </div>
 
