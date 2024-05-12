@@ -4,6 +4,7 @@ date: {{ .Date }}
 draft: true
 weight: 1000
 params:
+  image:
   github: 
   site: 
   demo: 

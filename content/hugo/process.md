@@ -222,19 +222,19 @@ once it is published, will only rarely be changed again. (see also [Note 1](#not
 
 Parekh and Fowler (2024) use the terms "Content Creation Stack" and "Content Delivery Stack" for the
 two systems that should be built to handle these two concerns. This proposal addresses
-issues of large sites with significant traffic, which is different from the web sites I am concerned here, 
+issues of large sites with significant traffic, which is different from the web sites I am concerned with here, 
 but I will use their terminology nonetheless as it helps clarify the different architectures.
 
 #### Note 3: Lamp Stack
 The acronym LAMP stands for Linux, Apache, MySQL, PHP ([3]) and is an often used open source stack
 for web applications. PHP runs within the Apache webserver and is connected to a MySQL database.
-Most common CMS are built on this stack - as are Wordpress, Typo3 or Drupal.
+Most common CMS are built on this stack - as for instance Wordpress, Typo3 or Drupal.
 
 While this is a well-known and powerful stack, it has two main drawbacks for simple web sites:
 - it includes the execution of a script on the server side, which may be a security risk and thus requires regular updates.
 - a database is required
-- both results in a more complex server setup and maintenance if you run your own server, or in significant
-higher provider costs if you use a hosted solution.
+- both results in a more complex server setup and maintenance if you run your own server, or in 
+higher hosting costs if you use a hosted solution.
 
 ```mermaid
 flowchart LR
@@ -268,7 +268,7 @@ end
 **Own Deployment Diagram for a CMS like Wordpress, see also (WordPress 2024)**
 
 ##### No Editing/Publishing separation
-This diagram includes one editor and two readers. It shows the issue that with a WebApp CMS, editing and publishing is done through the same app, which also means that usually the editing possibility has to be kept open even if the site is not currently changed. 
+The diagram below shows one editor and two readers. With a WebApp CMS, editing and publishing is done through the same app, which also means that the editing possibility has to be kept open even if the site is not currently changed. 
 ```mermaid
 flowchart LR
 subgraph thecms["WebApp CMS"]
