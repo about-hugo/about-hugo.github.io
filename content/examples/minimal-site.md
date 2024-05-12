@@ -13,8 +13,17 @@ params:
 ---
 Minimal Site/Minimal Theme is a basic site & theme 
 which has a minimal page structure with header, footer and navigation partials
-and a dynamic recursive navigation that includes the reflects the complete file tree in `content/` file tree.
+and a dynamic recursive navigation which reflects the complete `content/` file tree.
 <!--more-->
+
+This example shows
+- how a site is constructed with partials for header, footer and navigation
+- two ways to create menus/navigation:
+     - dynamically from the /content folder tree structure (left site, in partials/navigation.html)
+     - with .Site.Menus.main in partials/footer.html
+
+See the [Navigation](/hugo/content#navigation) for more information on how to create a menu.
+
 
 ![](/screenshots/big/minimal-site.jpg)
 
