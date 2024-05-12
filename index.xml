@@ -6,7 +6,7 @@
     <description>Recent content on About Hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 May 2024 03:00:13 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2024 03:08:46 +0200</lastBuildDate>
     <atom:link href="https://about-hugo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quick Start</title>
@@ -161,6 +161,13 @@
       <pubDate>Fri, 10 May 2024 22:49:06 +0200</pubDate>
       <guid>https://about-hugo.github.io/hugo/content/</guid>
       <description>&lt;p&gt;Content Creation in Hugo is done by editing markdown files.&#xA;The site&amp;rsquo;s structure is defined in templates, which are also plain text files.&#xA;Both  are usually put under version control and edited with the same tools&#xA;used in software development.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Readme</title>
+      <link>https://about-hugo.github.io/examples/readme/</link>
+      <pubDate>Sun, 12 May 2024 03:04:03 +0200</pubDate>
+      <guid>https://about-hugo.github.io/examples/readme/</guid>
+      <description>If you add a README.md to a repo and enable github pages for the main branch, a simple webpage is generated from this markdown file.</description>
     </item>
     <item>
       <title>Publishing (Content Delivery)</title>

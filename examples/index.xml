@@ -6,7 +6,7 @@
     <description>Recent content in Hugo Examples and Theme Tryouts on About Hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 May 2024 03:00:13 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2024 03:08:46 +0200</lastBuildDate>
     <atom:link href="https://about-hugo.github.io/examples/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo Bare Bones</title>
@@ -35,6 +35,13 @@
       <pubDate>Sat, 11 May 2024 00:32:58 +0200</pubDate>
       <guid>https://about-hugo.github.io/examples/wiki-to-hugo/</guid>
       <description>&lt;p&gt;Wiki to Hugo is a repo to try out creating content using a github wiki.&lt;/p&gt;&#xA;&lt;p&gt;(not a hugo page!)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Readme</title>
+      <link>https://about-hugo.github.io/examples/readme/</link>
+      <pubDate>Sun, 12 May 2024 03:04:03 +0200</pubDate>
+      <guid>https://about-hugo.github.io/examples/readme/</guid>
+      <description>If you add a README.md to a repo and enable github pages for the main branch, a simple webpage is generated from this markdown file.</description>
     </item>
   </channel>
 </rss>
