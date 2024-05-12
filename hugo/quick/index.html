@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Wiki to Hugo - About Hugo</title>
+  <title>Quick Start - About Hugo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://about-hugo.github.io/favicon.png">
@@ -143,23 +143,27 @@
           <div class="sidebar">
             
 <div class="docs-menu">
-  <h4>Examples</h4>
+  <h4>Hugo</h4>
   <ul>
     
-    <li class="">
-      <a href="https://about-hugo.github.io/examples/hugo-bare-bones/">Hugo Bare Bones</a>
-    </li>
-    
-    <li class="">
-      <a href="https://about-hugo.github.io/examples/hugo-bare-theme/">Hugo Bare Theme</a>
-    </li>
-    
-    <li class="">
-      <a href="https://about-hugo.github.io/examples/minimal-site/">Minimal Site &amp; Theme</a>
-    </li>
-    
     <li class="active ">
-      <a href="https://about-hugo.github.io/examples/wiki-to-hugo/">Wiki to Hugo</a>
+      <a href="https://about-hugo.github.io/hugo/quick/">Quick Start</a>
+    </li>
+    
+    <li class="">
+      <a href="https://about-hugo.github.io/hugo/overview/">Overview</a>
+    </li>
+    
+    <li class="">
+      <a href="https://about-hugo.github.io/hugo/process/">Content Creation and Delivery Processes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://about-hugo.github.io/hugo/content/">Editing (Content Creation)</a>
+    </li>
+    
+    <li class="">
+      <a href="https://about-hugo.github.io/hugo/deployment/">Publishing (Content Delivery)</a>
     </li>
     
   </ul>
@@ -169,82 +173,51 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Wiki to Hugo</h1>
+<h1 class="title">Quick Start</h1>
 <div class="content ">
   
-  <table>
-
-    
-  
-  
-  
-  <tr><th>Description:</th><td>
-    Not a Hugo Site - github wiki tryout
-  </td></tr>
-  
-
-    
-  
-  
-  
-  <tr><th>Demo Site:</th><td>
-    
-       <a href="https://github.com/about-hugo/wiki-to-hugo/wiki">https://github.com/about-hugo/wiki-to-hugo/wiki</a>
-    
-  </td></tr>
-  
-
-    
-  
-  
-  
-
-    
-  
-  
-  
-  <tr><th>Source Code:</th><td>
-    
-       <a href="https://github.com/about-hugo/wiki-to-hugo">https://github.com/about-hugo/wiki-to-hugo</a>
-    
-  </td></tr>
-  
-
-  
-     
-     <tr><th>GH Actions:</th><td>
-           <a href="https://github.com/about-hugo/wiki-to-hugo/actions">actions</a><br/>
-          </td> </tr>
-     
- 
-    
-  
-  
-  
-
-    
-  
-  
-  
-
-       
-</table>
- 
-
-
-  
-  <p>Wiki to Hugo is a repo to try out creating content using a github wiki.</p>
-<p>(not a hugo page!)</p>
-<p><img src="/screenshots/big/github-wiki.jpg" alt=""></p>
-<p>Github Wikis are very simple wikis which can be attached to a github
-repo. As they allow to use github flavoured markdown as their
-content format, they can be a starting point to collect content in a team
-with a minimum setup.</p>
-<p>Github Wikis are git repositories themselves, which allows for the content to be
-edited not only online, but also with your local editing tools and using git
-as a tool for version control and to solve merge conflicts.</p>
-<p>With an educational license, they can be created for private repos making them also
-private, which makes them feasible for collection content that may not (yet) be published.</p>
+  <p>You can quickly get started with a deployed site on github by forking
+one of the example sites.</p>
+<ol>
+<li>Fork one of the <a href="/examples">Example</a> or <a href="/themes">Theme Tryout</a> sites</li>
+<li>Enable workflows for the fork</li>
+<li>Trigger a workflow run</li>
+<li>Enable gh pages for your repo</li>
+<li>Clone your repo to your computer</li>
+<li>Install Hugo</li>
+<li>Call hugo server</li>
+</ol>
+<h5 id="1-fork-one-of-the-exampleexamples-or-theme-tryoutthemes-sites">1. Fork one of the <a href="/examples">Example</a> or <a href="/themes">Theme Tryout</a> sites</h5>
+<p>Go to the github repo of the example/theme tryout and click fork: <img src="./fork.jpg" alt=""></p>
+<h5 id="2-enable-workflows-for-the-fork">2. Enable workflows for the fork</h5>
+<p>In your own (forked) repo, go to the Actions section, then enable workflows:
+<img src="./enable-workflows.jpg" alt=""></p>
+<h5 id="3-trigger-a-workflow-run">3. Trigger a workflow run</h5>
+<p>go to the Actions section. If the workflow has a manual run button, run it:
+<img src="./run-workflow.jpg" alt=""> - this creates the gh-pages branch which is needed
+to enable github pages. You can also trigger a build by pushing to the repo.</p>
+<h5 id="4-enable-gh-pages-for-your-repo">4. Enable gh pages for your repo</h5>
+<p>Go to settings/pages and
+choose &ldquo;deploy from branch&rdquo;. To be able to do so, the gh-pages branch must have been
+created beforehand.
+<img src="./deploy-from-branch.jpg" alt=""></p>
+<p>After this, the page should start to build. To check this, go to the gh actions page. You
+should see the first page deployment in progress:</p>
+<p><img src="./pages-build-and-deployment.jpg" alt=""></p>
+<h5 id="5-clone-your-repo-to-your-computer">5. Clone your repo to your computer</h5>
+<p>git clone &hellip;.</p>
+<h5 id="6-install-hugo">6. Install Hugo</h5>
+<p>See  Installation | Hugo: <a href="https://gohugo.io/installation/">https://gohugo.io/installation/</a></p>
+<h5 id="7-call-hugo-server">7. Call hugo server</h5>
+<p>cd into your local copy and run</p>
+<pre><code>hugo server
+</code></pre>
+<p>Have fun!</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>Quick start | Hugo: <a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></li>
+<li>Getting started | Hugo: <a href="https://gohugo.io/getting-started/">https://gohugo.io/getting-started/</a></li>
+</ul>
 </div>
 </div>
 

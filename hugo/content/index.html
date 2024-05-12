@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Editing/Content Creation - About Hugo</title>
+  <title>Editing (Content Creation) - About Hugo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://about-hugo.github.io/favicon.png">
@@ -147,6 +147,10 @@
   <ul>
     
     <li class="">
+      <a href="https://about-hugo.github.io/hugo/quick/">Quick Start</a>
+    </li>
+    
+    <li class="">
       <a href="https://about-hugo.github.io/hugo/overview/">Overview</a>
     </li>
     
@@ -155,11 +159,11 @@
     </li>
     
     <li class="active ">
-      <a href="https://about-hugo.github.io/hugo/content/">Editing/Content Creation</a>
+      <a href="https://about-hugo.github.io/hugo/content/">Editing (Content Creation)</a>
     </li>
     
     <li class="">
-      <a href="https://about-hugo.github.io/hugo/deployment/">Deployment</a>
+      <a href="https://about-hugo.github.io/hugo/deployment/">Publishing (Content Delivery)</a>
     </li>
     
   </ul>
@@ -169,27 +173,345 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Editing/Content Creation</h1>
+<h1 class="title">Editing (Content Creation)</h1>
 <div class="content ">
   
   <p>Content Creation in Hugo is done by editing markdown files.
 The site&rsquo;s structure is defined in templates, which are also plain text files.
 Both  are usually put under version control and edited with the same tools
 used in software development.</p>
+<pre class="mermaid">flowchart LR
+    content[/"Site Content (Markdown)"/]
+    structure[/"Site Structure (HTML, CSS, JS)"/]
+    hugo["`
+    **HUGO**
+     ⚙️ `"]
+    website[/"Complete Website with Content 
+    (HTML, CSS, JS)"/]
+    content & structure --> hugo
+    hugo --> website
+</pre>
+
+<h2 id="editing-overview">Editing Overview</h2>
+<p>Have a look at the hugo site examples section. The <a href="/examples/hugo-bare-bones">hugo-bare-bones/</a>
+example is a good starting point to explore Hugo&rsquo;s file structure. Basically, the generated site
+mirrors the structure in the content folder.</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 608 265"
+      >
+      <g transform='translate(8,16)'>
+<text text-anchor='middle' x='48' y='52' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='48' y='68' fill='currentColor' style='font-size:1em'>└</text>
+<text text-anchor='middle' x='48' y='148' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='48' y='164' fill='currentColor' style='font-size:1em'>├</text>
+<text text-anchor='middle' x='48' y='180' fill='currentColor' style='font-size:1em'>│</text>
+<text text-anchor='middle' x='48' y='196' fill='currentColor' style='font-size:1em'>│</text>
+<text text-anchor='middle' x='48' y='212' fill='currentColor' style='font-size:1em'>│</text>
+<text text-anchor='middle' x='48' y='228' fill='currentColor' style='font-size:1em'>└</text>
+<text text-anchor='middle' x='56' y='52' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='56' y='68' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='56' y='148' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='56' y='164' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='56' y='180' fill='currentColor' style='font-size:1em'> </text>
+<text text-anchor='middle' x='56' y='196' fill='currentColor' style='font-size:1em'> </text>
+<text text-anchor='middle' x='56' y='212' fill='currentColor' style='font-size:1em'> </text>
+<text text-anchor='middle' x='56' y='228' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='64' y='20' fill='currentColor' style='font-size:1em'>H</text>
+<text text-anchor='middle' x='64' y='52' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='64' y='68' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='64' y='148' fill='currentColor' style='font-size:1em'>y</text>
+<text text-anchor='middle' x='64' y='164' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='64' y='180' fill='currentColor' style='font-size:1em'> </text>
+<text text-anchor='middle' x='64' y='196' fill='currentColor' style='font-size:1em'> </text>
+<text text-anchor='middle' x='64' y='212' fill='currentColor' style='font-size:1em'> </text>
+<text text-anchor='middle' x='64' y='228' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='72' y='20' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='72' y='52' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='72' y='148' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='80' y='20' fill='currentColor' style='font-size:1em'>g</text>
+<text text-anchor='middle' x='80' y='52' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='80' y='68' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='80' y='84' fill='currentColor' style='font-size:1em'>├</text>
+<text text-anchor='middle' x='80' y='100' fill='currentColor' style='font-size:1em'>└</text>
+<text text-anchor='middle' x='80' y='148' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='80' y='164' fill='currentColor' style='font-size:1em'>_</text>
+<text text-anchor='middle' x='80' y='180' fill='currentColor' style='font-size:1em'>├</text>
+<text text-anchor='middle' x='80' y='196' fill='currentColor' style='font-size:1em'>├</text>
+<text text-anchor='middle' x='80' y='212' fill='currentColor' style='font-size:1em'>└</text>
+<text text-anchor='middle' x='80' y='228' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='88' y='20' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='88' y='52' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='88' y='68' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='88' y='84' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='88' y='100' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='88' y='148' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='88' y='164' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='88' y='180' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='88' y='196' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='88' y='212' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='88' y='228' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='96' y='52' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='96' y='68' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='96' y='84' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='96' y='100' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='96' y='148' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='96' y='164' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='96' y='180' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='96' y='196' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='96' y='212' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='96' y='228' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='104' y='20' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='104' y='68' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='104' y='164' fill='currentColor' style='font-size:1em'>f</text>
+<text text-anchor='middle' x='104' y='228' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='112' y='20' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='112' y='68' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='112' y='84' fill='currentColor' style='font-size:1em'>_</text>
+<text text-anchor='middle' x='112' y='100' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='112' y='164' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='112' y='180' fill='currentColor' style='font-size:1em'>b</text>
+<text text-anchor='middle' x='112' y='196' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='112' y='212' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='112' y='228' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='120' y='20' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='120' y='84' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='120' y='100' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='120' y='164' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='120' y='180' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='120' y='196' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='120' y='212' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='120' y='228' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='128' y='20' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='128' y='84' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='128' y='100' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='128' y='164' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='128' y='180' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='128' y='196' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='128' y='212' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='128' y='228' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='136' y='20' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='136' y='84' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='136' y='100' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='136' y='164' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='136' y='180' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='136' y='196' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='136' y='212' fill='currentColor' style='font-size:1em'>g</text>
+<text text-anchor='middle' x='136' y='228' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='144' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='144' y='84' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='144' y='100' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='144' y='180' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='144' y='196' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='144' y='212' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='144' y='228' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='152' y='84' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='152' y='100' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='152' y='180' fill='currentColor' style='font-size:1em'>f</text>
+<text text-anchor='middle' x='152' y='196' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='152' y='212' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='152' y='228' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='160' y='84' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='160' y='100' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='160' y='180' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='160' y='196' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='160' y='212' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='168' y='84' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='168' y='100' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='168' y='180' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='168' y='196' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='168' y='212' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='176' y='84' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='176' y='180' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='176' y='196' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='176' y='212' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='184' y='180' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='184' y='212' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='192' y='180' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='192' y='212' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='320' y='52' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='320' y='68' fill='currentColor' style='font-size:1em'>├</text>
+<text text-anchor='middle' x='320' y='84' fill='currentColor' style='font-size:1em'>└</text>
+<text text-anchor='middle' x='328' y='52' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='328' y='68' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='328' y='84' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='336' y='52' fill='currentColor' style='font-size:1em'>b</text>
+<text text-anchor='middle' x='336' y='68' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='336' y='84' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='344' y='20' fill='currentColor' style='font-size:1em'>G</text>
+<text text-anchor='middle' x='344' y='52' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='352' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='352' y='52' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='352' y='68' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='352' y='84' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='352' y='100' fill='currentColor' style='font-size:1em'>├</text>
+<text text-anchor='middle' x='352' y='116' fill='currentColor' style='font-size:1em'>│</text>
+<text text-anchor='middle' x='352' y='132' fill='currentColor' style='font-size:1em'>└</text>
+<text text-anchor='middle' x='360' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='360' y='52' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='360' y='68' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='360' y='84' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='360' y='100' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='360' y='132' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='368' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='368' y='68' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='368' y='84' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='368' y='100' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='368' y='132' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='376' y='20' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='376' y='68' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='376' y='84' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='384' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='384' y='68' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='384' y='84' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='384' y='100' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='384' y='116' fill='currentColor' style='font-size:1em'>└</text>
+<text text-anchor='middle' x='384' y='132' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='392' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='392' y='68' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='392' y='100' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='392' y='116' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='392' y='132' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='400' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='400' y='68' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='400' y='100' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='400' y='116' fill='currentColor' style='font-size:1em'>─</text>
+<text text-anchor='middle' x='400' y='132' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='408' y='20' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='408' y='68' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='408' y='100' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='408' y='132' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='416' y='68' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='416' y='100' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='416' y='116' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='416' y='132' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='424' y='20' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='424' y='68' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='424' y='116' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='424' y='132' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='432' y='20' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='432' y='116' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='432' y='132' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='440' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='440' y='116' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='440' y='132' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='448' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='448' y='116' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='448' y='132' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='456' y='116' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='456' y='132' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='464' y='116' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='472' y='116' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='480' y='116' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='488' y='116' fill='currentColor' style='font-size:1em'>l</text>
+</g>
+
+    </svg>
+  
+</div>
+<p>You can add new pages by either</p>
+<ul>
+<li>calling <strong>hugo new</strong> (e.g <code>hugo new content posts/second-post.md</code> ) which
+copies a template from /archetypes, or by</li>
+<li>creating a new markdown file and adding the front matter (page settings at the top of the file) manually (e.g. by copying and modifying it from another file).</li>
+</ul>
+<h2 id="local-build">Local build</h2>
+<p>While editing your page, you can have hugo build and serve your page by calling</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    hugo server
+</span></span></code></pre></div><p>and access the site in your browser:
+<code>http://localhost:1313</code></p>
+<p>If the port 1313 is not available, another port will be used. (check the output).
+Call <code>hugo server --help</code> to see further options.
+Calling <code>hugo</code> without <code>server</code> will only generate the site (to the /public folder) without starting a development server. This is mainly used to build the site for
+production deployment.</p>
+<p>My practice is to create a makefile which will open the browser and start hugo with one command - have a look at the <code>Makefile</code>s in the <a href="/sites">hugo /sites</a> repos. Some of the themes
+(e.g. GeekDoc) use npm for a similar automation.
+The hugo command currently used for this site:</p>
+<pre><code>hugo -b &quot;http://localhost:$(port)&quot; --enableGitInfo --navigateToChanged --buildDrafts server -p $(port)
+</code></pre>
+<pre class="mermaid">flowchart TD
+subgraph cc["content creation"]
+direction LR
+ed1((Editor))
+
+    content[/"Site Content (Markdown)"/]
+    structure[/"Site Structure (HTML, CSS, JS)"/]
+
+    subgraph hs["hugo server"]
+    hugo["`
+    **HUGO**
+     ⚙️ `"]
+    website[/"Complete Website with Content 
+    (HTML, CSS, JS)"/]
+    end
+
+    content & structure --> hugo
+    hugo --> website
+    ed1 -->|edit|content
+    ed1 -->|edit|structure
+    website -..->|view|ed1
+    
+end
+</pre>
+
+<p>While editing the site, <code>hugo server</code> continuously rebuilds the complete website and provides
+it for preview by via an integrated http server.</p>
 <h2 id="markdown">Markdown</h2>
-<p>tbd</p>
+<p>Markdown is a text file format allowing for editing source files directly with as little
+visual clutter as possible. I prefer to edit hugo sites in a text editor
+(currently <a href="https://code.visualstudio.com/">visual studio code</a>) and have a browser
+window open that displays the generated page. Hugo server will update the page automatically
+after each save; with the <code>--navigateToChanged</code> option it will additionally switch to the
+current page.</p>
+<p><img src="editing-setup.jpg" alt="Editing Setup Screenshot">Editing Setup Screenshot</p>
+<h3 id="markdown-references">Markdown References</h3>
 <ul>
 <li>Hugo Markdown Reference | Markdown Guide: <a href="https://www.markdownguide.org/tools/hugo/">https://www.markdownguide.org/tools/hugo/</a></li>
 <li>Content formats | Hugo: <a href="https://gohugo.io/content-management/formats/">https://gohugo.io/content-management/formats/</a></li>
-<li>CommonMark Spec: <a href="https://spec.commonmark.org/0.31.2/#space">https://spec.commonmark.org/0.31.2/#space</a></li>
+<li>Configure markup | Hugo: <a href="https://gohugo.io/getting-started/configuration-markup/#goldmark">https://gohugo.io/getting-started/configuration-markup/#goldmark</a></li>
 <li>GitHub Flavored Markdown Spec: <a href="https://github.github.com/gfm/">https://github.github.com/gfm/</a></li>
 <li>CommonMark Spec: <a href="https://spec.commonmark.org/0.31.2/">https://spec.commonmark.org/0.31.2/</a></li>
-<li>Configure markup | Hugo: <a href="https://gohugo.io/getting-started/configuration-markup/#goldmark">https://gohugo.io/getting-started/configuration-markup/#goldmark</a></li>
 </ul>
-<h2 id="version-control">Version Control</h2>
-<p>tbd</p>
-<h2 id="local-build">Local build</h2>
-<p>tbd</p>
+<hr>
+<p><strong>A further Note on Markdown Editors:</strong>
+Markdown preview plugins are available for most major editors. They may be useful if you
+learn markdown or try something new and are not in an environment where the page is rendered directly - as e.g. when editing a repo readme.md page.
+If editing Hugo pages I still recommend using the page rendered by Hugo as your preview,
+you see the page as it is generated by hugo with its current settings (there are many different markdown renderers and all of them are configurable!) and will encounter errors or missing parts in the site setup right away.</p>
+<h2 id="navigation">Navigation</h2>
+<p>Hugo does not automatically create a complete navigation. It supports
+the (semi-) automatic generation of a main menu data structure which can
+then be used to render the navigation.
+The main menu can be created by either:</p>
+<ul>
+<li>setting <code>sectionPagesMenu = &quot;main&quot;</code> in the config: one main menu item will be generated for each section (direct /content subfolder)</li>
+<li>marking pages in their front matter to be included (<code>menus = 'main'</code>)</li>
+<li>declare menu items in the site configuration</li>
+</ul>
+<p>The <a href="/examples/minimal-site/">minimal-site</a> example shows a menu in the
+footer that is generated from  .Site.Menus.main
+<code>themes/minimal-theme/layouts/partials/footer.html</code>.
+It also shows that the above mentioned
+three ways to add items to the menu can be combined.</p>
+<p>Hugo offers various ways to traverse the site structure which can be used
+to generate a navigation without the .Site.Menus intermediary.
+The <a href="/examples/minimal-site/">minimal-site</a> example shows a way how the main navigation
+(in layouts/partials/navigation.html) can be
+automatically generated from the site structure. The <a href="/themes/hugo-geekdoc-tryout/">GeekDoc theme </a> also generates the menu in an
+elaborate and configurable way.</p>
+<p>When choosing a theme for your site, carefully consider if the menu structure matches
+your planned content. Usually this includes having a look at the source code and test if
+it is extensible in the way you need. Note that most themes are categorized by their
+purpose and have an according main navigation, like for instance an hierarchical structure for
+<a href="https://themes.gohugo.io/tags/docs/">Documentation</a> themes or chronological posts lists for
+<a href="https://themes.gohugo.io/tags/blog/">Blogs</a>.</p>
 </div>
 </div>
 
@@ -216,7 +538,7 @@ used in software development.</p>
 
           
           
-            <div class="copyright"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://about-hugo.github.io/">About Hugo Project</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://barnekleinen.de">Barne Kleinen</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p></div>
+            <div class="copyright"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://about-hugo.github.io/">About Hugo Project</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://bkleinen.github.io">Barne Kleinen</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p></div>
           
         </div>
       </div>
@@ -225,6 +547,11 @@ used in software development.</p>
 </div>
 
   
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+
 
 
   

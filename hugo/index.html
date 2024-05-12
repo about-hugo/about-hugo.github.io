@@ -147,6 +147,10 @@
   <ul>
     
     <li class="">
+      <a href="https://about-hugo.github.io/hugo/quick/">Quick Start</a>
+    </li>
+    
+    <li class="">
       <a href="https://about-hugo.github.io/hugo/overview/">Overview</a>
     </li>
     
@@ -155,11 +159,11 @@
     </li>
     
     <li class="">
-      <a href="https://about-hugo.github.io/hugo/content/">Editing/Content Creation</a>
+      <a href="https://about-hugo.github.io/hugo/content/">Editing (Content Creation)</a>
     </li>
     
     <li class="">
-      <a href="https://about-hugo.github.io/hugo/deployment/">Deployment</a>
+      <a href="https://about-hugo.github.io/hugo/deployment/">Publishing (Content Delivery)</a>
     </li>
     
   </ul>
@@ -174,16 +178,24 @@
 <h1 class="title">Hugo Introduction</h1>
 <div class="content">
   <h2 id="hugo-static-website-generator">Hugo Static Website Generator</h2>
-<p><a href="https://gohugo.io/">Hugo</a> is a static website generator implemented in the <a href="https://go.dev/">Go Programming Language</a>.</p>
+<p><a href="https://gohugo.io/">Hugo</a> is a static website generator implemented in the <a href="https://go.dev/">Go Programming Language</a>.
+This documentation is meant to complement the <a href="https://gohugo.io/documentation/">Hugo documentation</a> by providing a high-level overview of the structure of Hugo.</p>
 
 </div>
 
 
 <div class="summary mb-2">
   
+  <h2 class="title-summary"><a href="https://about-hugo.github.io/hugo/quick/">Quick Start</a></h2>
+  <p><p>You can quickly get started with a deployed site on github by forking
+one of the example sites.</p></p>
+</div>
+
+
+<div class="summary mb-2">
+  
   <h2 class="title-summary"><a href="https://about-hugo.github.io/hugo/overview/">Overview</a></h2>
-  <p><p>As a web static site generator, hugo takes the site structure and the site content (in markdown format) and
-generates a static web site. The complete web site - HTML, CSS, JS in a directory structure - is then copied to the web server, which only needs to serve these static files.</p></p>
+  <p><p>As a static web site generator, hugo takes the site structure and the site content (in markdown format) and generates the complete web site. The web site - HTML, CSS, JS in a directory structure - is then copied to the web server. The web server then only serves static files, with no need to invoke scripts or to access a database.</p></p>
 </div>
 
 
@@ -199,7 +211,7 @@ local computer, and content delivery is done by a static web server like nginx o
 
 <div class="summary mb-2">
   
-  <h2 class="title-summary"><a href="https://about-hugo.github.io/hugo/content/">Editing/Content Creation</a></h2>
+  <h2 class="title-summary"><a href="https://about-hugo.github.io/hugo/content/">Editing (Content Creation)</a></h2>
   <p><p>Content Creation in Hugo is done by editing markdown files.
 The site&rsquo;s structure is defined in templates, which are also plain text files.
 Both  are usually put under version control and edited with the same tools
@@ -209,9 +221,10 @@ used in software development.</p></p>
 
 <div class="summary mb-2">
   
-  <h2 class="title-summary"><a href="https://about-hugo.github.io/hugo/deployment/">Deployment</a></h2>
-  <p>As for the content creation, software engineering tools are used for deployment.
-This page showcases automated deployment using github actions. On the various example sites and theme tryouts, explore the Actions tab in github and the workflow definitions located in .github/workflows.</p>
+  <h2 class="title-summary"><a href="https://about-hugo.github.io/hugo/deployment/">Publishing (Content Delivery)</a></h2>
+  <p><p>A Hugo site is published by copying it (deploying it) to any web server which
+then makes it available to the readers (via the http protocol, the delivery).
+A web server is a machine running http server software like <a href="https://httpd.apache.org/">Apache</a> or <a href="https://www.nginx.com/">NGINX</a>.The deployment can be automated using Continuous Deployment practices.</p></p>
 </div>
 
 
@@ -240,7 +253,7 @@ This page showcases automated deployment using github actions. On the various ex
 
           
           
-            <div class="copyright"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://about-hugo.github.io/">About Hugo Project</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://barnekleinen.de">Barne Kleinen</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p></div>
+            <div class="copyright"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://about-hugo.github.io/">About Hugo Project</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://bkleinen.github.io">Barne Kleinen</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p></div>
           
         </div>
       </div>

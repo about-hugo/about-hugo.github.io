@@ -6,8 +6,15 @@
     <description>Recent content on About Hugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2024 16:43:48 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2024 02:26:52 +0200</lastBuildDate>
     <atom:link href="https://about-hugo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quick Start</title>
+      <link>https://about-hugo.github.io/hugo/quick/</link>
+      <pubDate>Sun, 12 May 2024 01:34:16 +0200</pubDate>
+      <guid>https://about-hugo.github.io/hugo/quick/</guid>
+      <description>&lt;p&gt;You can quickly get started with a deployed site on github by forking&#xA;one of the example sites.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Install Hugo</title>
       <link>https://about-hugo.github.io/docs/install-hugo/</link>
@@ -76,7 +83,7 @@
       <link>https://about-hugo.github.io/hugo/overview/</link>
       <pubDate>Fri, 10 May 2024 10:10:01 +0200</pubDate>
       <guid>https://about-hugo.github.io/hugo/overview/</guid>
-      <description>&lt;p&gt;As a web static site generator, hugo takes the site structure and the site content (in markdown format) and&#xA;generates a static web site. The complete web site - HTML, CSS, JS in a directory structure - is then copied to the web server, which only needs to serve these static files.&lt;/p&gt;</description>
+      <description>&lt;p&gt;As a static web site generator, hugo takes the site structure and the site content (in markdown format) and generates the complete web site. The web site - HTML, CSS, JS in a directory structure - is then copied to the web server. The web server then only serves static files, with no need to invoke scripts or to access a database.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About the Project</title>
@@ -149,18 +156,18 @@
       <description>&lt;p&gt;This is a theme based on HBStack.&#xA;HBStack is is a modular framework for building Hugo pages,&#xA;see &lt;a href=&#34;https://hbstack.dev/&#34;&gt;https://hbstack.dev/&lt;/a&gt;&#xA;Both the framework and theme are massive and seem well-designed and&#xA;powerful; before starting a project with it some time would be&#xA;necessary to explore and evaluate this framework.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Editing/Content Creation</title>
+      <title>Editing (Content Creation)</title>
       <link>https://about-hugo.github.io/hugo/content/</link>
       <pubDate>Fri, 10 May 2024 22:49:06 +0200</pubDate>
       <guid>https://about-hugo.github.io/hugo/content/</guid>
       <description>&lt;p&gt;Content Creation in Hugo is done by editing markdown files.&#xA;The site&amp;rsquo;s structure is defined in templates, which are also plain text files.&#xA;Both  are usually put under version control and edited with the same tools&#xA;used in software development.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Deployment</title>
+      <title>Publishing (Content Delivery)</title>
       <link>https://about-hugo.github.io/hugo/deployment/</link>
       <pubDate>Fri, 10 May 2024 21:13:57 +0200</pubDate>
       <guid>https://about-hugo.github.io/hugo/deployment/</guid>
-      <description>As for the content creation, software engineering tools are used for deployment.&#xA;This page showcases automated deployment using github actions. On the various example sites and theme tryouts, explore the Actions tab in github and the workflow definitions located in .github/workflows.</description>
+      <description>&lt;p&gt;A Hugo site is published by copying it (deploying it) to any web server which&#xA;then makes it available to the readers (via the http protocol, the delivery).&#xA;A web server is a machine running http server software like &lt;a href=&#34;https://httpd.apache.org/&#34;&gt;Apache&lt;/a&gt; or &lt;a href=&#34;https://www.nginx.com/&#34;&gt;NGINX&lt;/a&gt;.The deployment can be automated using Continuous Deployment practices.&lt;/p&gt;</description>
     </item>
     <item>
       <title>bkleinen.github.io</title>

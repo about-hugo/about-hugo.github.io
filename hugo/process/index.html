@@ -147,6 +147,10 @@
   <ul>
     
     <li class="">
+      <a href="https://about-hugo.github.io/hugo/quick/">Quick Start</a>
+    </li>
+    
+    <li class="">
       <a href="https://about-hugo.github.io/hugo/overview/">Overview</a>
     </li>
     
@@ -155,11 +159,11 @@
     </li>
     
     <li class="">
-      <a href="https://about-hugo.github.io/hugo/content/">Editing/Content Creation</a>
+      <a href="https://about-hugo.github.io/hugo/content/">Editing (Content Creation)</a>
     </li>
     
     <li class="">
-      <a href="https://about-hugo.github.io/hugo/deployment/">Deployment</a>
+      <a href="https://about-hugo.github.io/hugo/deployment/">Publishing (Content Delivery)</a>
     </li>
     
   </ul>
@@ -367,18 +371,18 @@ while most web pages have a small group of editors and a larger group of readers
 once it is published, will only rarely be changed again. (see also <a href="#note-1-web-sites-vs-web-apps">Note 1</a>).</p>
 <p>Parekh and Fowler (2024) use the terms &ldquo;Content Creation Stack&rdquo; and &ldquo;Content Delivery Stack&rdquo; for the
 two systems that should be built to handle these two concerns. This proposal addresses
-issues of large sites with significant traffic, which is different from the web sites I am concerned here,
+issues of large sites with significant traffic, which is different from the web sites I am concerned with here,
 but I will use their terminology nonetheless as it helps clarify the different architectures.</p>
 <h4 id="note-3-lamp-stack">Note 3: Lamp Stack</h4>
 <p>The acronym LAMP stands for Linux, Apache, MySQL, PHP (<a href="https://de.wikipedia.org/wiki/LAMP_(Softwarepaket)">3</a>) and is an often used open source stack
 for web applications. PHP runs within the Apache webserver and is connected to a MySQL database.
-Most common CMS are built on this stack - as are Wordpress, Typo3 or Drupal.</p>
+Most common CMS are built on this stack - as for instance Wordpress, Typo3 or Drupal.</p>
 <p>While this is a well-known and powerful stack, it has two main drawbacks for simple web sites:</p>
 <ul>
 <li>it includes the execution of a script on the server side, which may be a security risk and thus requires regular updates.</li>
 <li>a database is required</li>
-<li>both results in a more complex server setup and maintenance if you run your own server, or in significant
-higher provider costs if you use a hosted solution.</li>
+<li>both results in a more complex server setup and maintenance if you run your own server, or in
+higher hosting costs if you use a hosted solution.</li>
 </ul>
 <pre class="mermaid">flowchart LR
 subgraph thecms["WebApp CMS"]
@@ -411,7 +415,7 @@ end
 
 <p><strong>Own Deployment Diagram for a CMS like Wordpress, see also (WordPress 2024)</strong></p>
 <h5 id="no-editingpublishing-separation">No Editing/Publishing separation</h5>
-<p>This diagram includes one editor and two readers. It shows the issue that with a WebApp CMS, editing and publishing is done through the same app, which also means that usually the editing possibility has to be kept open even if the site is not currently changed.</p>
+<p>The diagram below shows one editor and two readers. With a WebApp CMS, editing and publishing is done through the same app, which also means that the editing possibility has to be kept open even if the site is not currently changed.</p>
 <pre class="mermaid">flowchart LR
 subgraph thecms["WebApp CMS"]
 direction LR
@@ -483,7 +487,7 @@ end
 
           
           
-            <div class="copyright"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://about-hugo.github.io/">About Hugo Project</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://barnekleinen.de">Barne Kleinen</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p></div>
+            <div class="copyright"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://about-hugo.github.io/">About Hugo Project</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://bkleinen.github.io">Barne Kleinen</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p></div>
           
         </div>
       </div>

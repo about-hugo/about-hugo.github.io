@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Deployment - About Hugo</title>
+  <title>Publishing (Content Delivery) - About Hugo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://about-hugo.github.io/favicon.png">
@@ -147,6 +147,10 @@
   <ul>
     
     <li class="">
+      <a href="https://about-hugo.github.io/hugo/quick/">Quick Start</a>
+    </li>
+    
+    <li class="">
       <a href="https://about-hugo.github.io/hugo/overview/">Overview</a>
     </li>
     
@@ -155,11 +159,11 @@
     </li>
     
     <li class="">
-      <a href="https://about-hugo.github.io/hugo/content/">Editing/Content Creation</a>
+      <a href="https://about-hugo.github.io/hugo/content/">Editing (Content Creation)</a>
     </li>
     
     <li class="active ">
-      <a href="https://about-hugo.github.io/hugo/deployment/">Deployment</a>
+      <a href="https://about-hugo.github.io/hugo/deployment/">Publishing (Content Delivery)</a>
     </li>
     
   </ul>
@@ -169,14 +173,191 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Deployment</h1>
+<h1 class="title">Publishing (Content Delivery)</h1>
 <div class="content ">
   
-  <p>As for the content creation, software engineering tools are used for deployment.</p>
-<p>This page showcases automated deployment using github actions. On the various example
-sites and theme tryouts, explore the Actions tab in github and the workflow definitions
-located in <code>.github/workflows</code>.</p>
+  <p>A Hugo site is published by copying it (deploying it) to any web server which
+then makes it available to the readers (via the http protocol, the delivery).
+A web server is a machine running http server software like <a href="https://httpd.apache.org/">Apache</a> or <a href="https://www.nginx.com/">NGINX</a>.The deployment can be automated using Continuous Deployment practices.</p>
+<h2 id="deployment">Deployment</h2>
+<p>The diagram below, introduced on the  <a href="/hugo/process/">Content Creation and Delivery Processes</a> page,
+shows the content creation process done with hugo and the content delivery process based on the generated web site as independent processes. They are in fact technologically independent stacks.</p>
+<p>The only link between them is the deployment of the generated site on the web server&rsquo;s file system, which can be done with any means, manual or
+automated, to copy a file from one computer to another.</p>
+<pre class="mermaid">flowchart TB
 
+
+subgraph ssg["Static Site Generator"]
+direction LR
+
+subgraph cc["content creation"]
+ed1((Editor))
+
+    content[/"Site Content (Markdown)"/]
+    structure[/"Site Structure (HTML, CSS, JS)"/]
+    hugo["`
+    **HUGO**
+     ⚙️ `"]
+    website[/"Complete Website with Content 
+    (HTML, CSS, JS)"/]
+    content & structure --> hugo
+    hugo --> website
+    ed1 --> content
+ed1 --> structure
+end
+website==>|DEPLOYMENT|pages
+
+subgraph cd["content delivery"]
+subgraph Client["Client Side"]
+re1((Reader))
+re2((Reader))
+  browser2
+  browser3
+
+end
+
+subgraph Server["Server Side"]
+  subgraph webserver["Webserver"]
+    httpd["`
+    **httpd**
+    (nginx, apache)
+    `"]
+   httpd -..->pages
+       pages[/"Complete Website with Content 
+    (HTML, CSS, JS)"/]
+  end
+
+end
+
+re1 --> browser2["Browser"]
+re2 --> browser3["Browser"]
+browser2 <-..->|http/HTML| httpd
+browser3 <-..->|http/HTML| httpd
+
+end
+
+end
+</pre>
+
+<h2 id="deployment-pipeline">Deployment Pipeline</h2>
+<p>The <a href="/examples">examples</a> and <a href="/themes">theme tryouts</a> on this page are all automatically build and deployed with <a href="https://github.com/features/actions">Github Actions</a>. The Workflow definition files can be found in the repos in
+the <code>.github/workflows</code> folders. Most of these workflows are quite simple, they combine the hugo site generation (build step) with the deployment to gh pages (deployment step) in one github action job.  They also do not contain explicit tests. However, they would fail (and stop the pipeline) if the hugo build fails.</p>
+<p>The <a href="/examples/hugo-bare-bones">hugo-bare-bones</a> example contains a more complete pipeline with separate jobs for the build, test and deploy stages:
+<a href="https://github.com/about-hugo/hugo-bare-bones/actions/workflows/pipeline.yml">https://github.com/about-hugo/hugo-bare-bones/actions/workflows/pipeline.yml</a></p>
+<p>This workflow is split into three jobs, as github actions only shows these as separate build pipeline steps:</p>
+<p><img src="pipeline-gh-actions.jpg" alt="build, test, deploy pipeline">
+Build Pipeline in Github Actions Visualization</p>
+<h3 id="hugo-deployment-pipeline">Hugo Deployment Pipeline</h3>
+<p>The pipeline consists of the following steps:</p>
+<ol>
+<li>
+<p><strong>git push:</strong> the editor performs a git push</p>
+</li>
+<li>
+<p>GitHub Actions starts the gh action workflow:</p>
+<ol start="3">
+<li><strong>build</strong>: the hugo site is build on gh. (after checkout, installation of necessary software)</li>
+<li><strong>test</strong>: automated tests are executed</li>
+<li><strong>deploy</strong>: the generated site is deployed to the server</li>
+</ol>
+</li>
+</ol>
+<pre class="mermaid">
+flowchart TD
+subgraph cc["deployment pipeline"]
+direction LR
+    ed1((Editor))
+
+    subgraph hsou["Local Computer"]
+    content[/"Site Content (Markdown)"/]
+    structure[/"Site Structure (HTML, CSS, JS)"/]
+     push{{git push}}
+    end
+    
+
+    content-->push-->content2
+    structure-->push-->structure2
+   
+
+    subgraph ghhs2["deploy pipeline auf github - gh action"]
+    direction LR
+    subgraph build["build step"]
+    subgraph ghhs["repo on gh (origin)"]
+      
+      content2[/"Site Content (Markdown)"/]
+      structure2[/"Site Structure (HTML, CSS, JS)"/]
+      end
+      hugo{{"`
+    **HUGO**
+     ⚙️ `"}}
+     website[/"Generated Website"/]
+     end
+     
+     subgraph deploystep["deploy step"]
+         
+     deploy{{deployment}}
+    end
+    end
+    website-->deploy-->website2
+   
+    subgraph httpd["Web Server"]
+        website2[/"Generated Website"/]
+    end
+
+    content2 & structure2 --> hugo
+    hugo --> website
+    ed1 -->|edit|content
+    ed1 -->|edit|structure
+    
+    re1((Reader))
+    re2((Reader))
+    re3((Reader))
+    website2 --> re1 & re2 & re3
+
+
+     
+end
+</pre>
+
+<h4 id="notes-on-the-pipeline-steps">Notes on the Pipeline Steps</h4>
+<h6 id="1-git-push-the-editor-performs-a-git-push">1. <strong>git push:</strong> the editor performs a git push</h6>
+<p>As with software development, the source code of the hugo web site is shared via a central git repository.
+Automated Build- and Test Runs are triggered by changes to the repository. These can be configured. The example sites
+perform a build for every push, and the deployment only for every push on the main branch.</p>
+<p>Generated Files &ndash; like the generated site &ndash; are usually not included in the source code repository. This would be redundant;  also, rebuilding the site constitutes a test that the build works in a reproducible way.</p>
+<h6 id="2-github-actions-starts-the-gh-action-workflow">2. GitHub Actions starts the gh action workflow:</h6>
+<p>Via the on: push directive in the examples.</p>
+<h6 id="3-build-the-hugo-site-is-build-on-gh">3. <strong>build</strong>: the hugo site is build on gh.</h6>
+<p>after checkout, installation of necessary software -
+This does constitute a test. (see above)</p>
+<h6 id="4-test-automated-tests-are-executed">4. <strong>test</strong>: automated tests are executed</h6>
+<p>Hugo web sites could be tested
+automatically by checking for failing links, checking the validity of HTML, running automated accessibility checks and much more. The <a href="/examples/hugo-bare-bones/">hugo-bare-bones</a> contains an example how the site can be tested using
+Cypress, which allows for full end2end testing of the website. Cypress could even be used to test wether all
+mermaid diagrams could be rendered on the site (they are rendered by javascript in the browser)</p>
+<h6 id="5-deploy-the-generated-site-is-deployed-to-the-server">5. <strong>deploy</strong>: the generated site is deployed to the server</h6>
+<p>The actual deployment depends on the target server.
+The Showtime Website (production) is copied as via ssh to the virtual machine running nginx.
+For a deployment on github pages, the generated site is pushed to the gh-pages branch.</p>
+<h2 id="notes-on-terminology">Notes on Terminology</h2>
+<p>Within the dev/ops community, the terms Continuous Integration, Delivery and Deployment have a
+specific meaning.
+Martin Fowler defines <a href="https://martinfowler.com/articles/continuousIntegration.html">Continuous Integration</a> as &ldquo;a software development practice where each member of a team merges their changes into a codebase together with their colleagues changes at least daily&rdquo; (Fowler 2024).
+<a href="https://martinfowler.com/articles/continuousIntegration.html">Continuous Integration</a> usually includes an automated build and test run by a build server attached to the version management server.</p>
+<p><a href="https://martinfowler.com/bliki/ContinuousDelivery.html">Continuous Delivery</a> is the extension of Continuous Integration as it includes building the whole system and deploying it - automatically -
+in a staging or test environment, making it possible to run end-to-end acceptance tests.</p>
+<p>With an automated system build and deployment, deployment to production can be done automatically
+too (after earlier steps in the deployment pipeline, especially the tests ran successfully!) - this
+would be Continuous Deployment.</p>
+<p>While creating content for hugo web sites is not software development per se, the practices and tools, especially git and automation knowledge that is needed for continuous integration can be teached, learned and practiced using a hugo site.</p>
+<h2 id="references">References</h2>
+<p>(Fowler 2024): Fowler, Martin: Continuous Integration. Bliki-Article, 18.1.2024, <a href="https://martinfowler.com/articles/continuousIntegration.html">https://martinfowler.com/articles/continuousIntegration.html</a> , accessed 11.5.2024</p>
+<p>(Fowler 2013a): Fowler, Martin: Deployment Pipeline, Bliki-Article, 30.5.2013,
+<a href="https://martinfowler.com/bliki/DeploymentPipeline.html">https://martinfowler.com/bliki/DeploymentPipeline.html</a> , accessed 11.5.2024</p>
+<p>(Fowler 2013b):Continuous Delivery, Bliki-Article, 30 May 2013, <a href="https://martinfowler.com/bliki/ContinuousDelivery.html">https://martinfowler.com/bliki/ContinuousDelivery.html</a> , accessed 11.5.2024</p>
+<p>(Atlassian/Pittet o.D) Pittet, Sten: Continuous integration vs. delivery vs. deployment. Atlassian w/o date, technical documentation.
+<a href="https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment">https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment</a>, accessed 11.5.2024</p>
+<p>Audio: Hanselminutes Podcast 2 Oct 2012: <a href="https://www.youtube.com/watch?v=CZgYBcOTzAc">Continuous Delivery with Jez Humble and Martin Fowler</a>, accessed 11.5.2024</p>
 </div>
 </div>
 
@@ -203,7 +384,7 @@ located in <code>.github/workflows</code>.</p>
 
           
           
-            <div class="copyright"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://about-hugo.github.io/">About Hugo Project</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://barnekleinen.de">Barne Kleinen</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p></div>
+            <div class="copyright"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://about-hugo.github.io/">About Hugo Project</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://bkleinen.github.io">Barne Kleinen</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p></div>
           
         </div>
       </div>
@@ -212,6 +393,11 @@ located in <code>.github/workflows</code>.</p>
 </div>
 
   
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+
 
 
   
