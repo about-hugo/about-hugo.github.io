@@ -158,54 +158,61 @@ direction LR
 end
 ```
 
-### Notes on the Pipeline Steps
+#### Notes on the Pipeline Steps
 
-#### 1. **git push:** the editor performs a git push
+###### 1. **git push:** the editor performs a git push
 As with software development, the source code of the hugo web site is shared via a central git repository.
 Automated Build- and Test Runs are triggered by changes to the repository. These can be configured. The example sites
 perform a build for every push, and the deployment only for every push on the main branch.
 
 Generated Files -- like the generated site -- are usually not included in the source code repository. This would be redundant;  also, rebuilding the site constitutes a test that the build works in a reproducible way.
 
-#### 2. GitHub Actions starts the gh action workflow: 
+###### 2. GitHub Actions starts the gh action workflow: 
 Via the on: push directive in the examples. 
 
-#### 3. **build**: the hugo site is build on gh. (after checkout, installation of necessary software)
+###### 3. **build**: the hugo site is build on gh.
+after checkout, installation of necessary software - 
 This does constitute a test. (see above)
 
-#### 4. **test**: automated tests are executed
+###### 4. **test**: automated tests are executed
 Hugo web sites could be tested
 automatically by checking for failing links, checking the validity of HTML, running automated accessibility checks and much more. The [hugo-bare-bones](/examples/hugo-bare-bones/) contains an example how the site can be tested using 
 Cypress, which allows for full end2end testing of the website. Cypress could even be used to test wether all
 mermaid diagrams could be rendered on the site (they are rendered by javascript in the browser)
 
-#### 5. **deploy**: the generated site is deployed to the server
+###### 5. **deploy**: the generated site is deployed to the server
+The actual deployment depends on the target server.
+The Showtime Website (production) is copied as via ssh to the virtual machine running nginx.
+For a deployment on github pages, the generated site is pushed to the gh-pages branch.
 
 
 ## Notes on Terminology
 
+Within the dev/ops community, the terms Continuous Integration, Delivery and Deployment have a
+specific meaning.
+Martin Fowler defines [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) as "a software development practice where each member of a team merges their changes into a codebase together with their colleagues changes at least daily" (Fowler 2024).
+[Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) usually includes an automated build and test run by a build server attached to the version management server.
 
+[Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html) is the extension of Continuous Integration as it includes building the whole system and deploying it - automatically -
+in a staging or test environment, making it possible to run end-to-end acceptance tests.  
 
-Within the dev/ops community, Continuous Delivery is the extension of Continuous Integration 
+With an automated system build and deployment, deployment to production can be done automatically
+too (after earlier steps in the deployment pipeline, especially the tests ran successfully!) - this
+would be Continuous Deployment. 
 
-
-## Continuous Delivery
-
-[Continuous Delivery](https://martinfowler.com/bliki/ContinuousDelivery.html)
-
-## Continuous Integration
-
-Martin Fowler defines [Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html) as "a software development practice where each member of a team merges their changes into a codebase together with their colleagues changes at least daily" (Fowler 2024)
-
-While creating content for hugo web sites is not software development per se, the practices and tools, especially git knowledge that is needed for continuous integration can be teached, learned and practiced using a hugo site.
+While creating content for hugo web sites is not software development per se, the practices and tools, especially git and automation knowledge that is needed for continuous integration can be teached, learned and practiced using a hugo site.
 
 ## References
 
 (Fowler 2024): Fowler, Martin: Continuous Integration. Bliki-Article, 18.1.2024, https://martinfowler.com/articles/continuousIntegration.html , accessed 11.5.2024
 
-(Fowler 2013): Fowler, Martin: Deployment Pipeline, Bliki-Article, 30.5.2013, 
+(Fowler 2013a): Fowler, Martin: Deployment Pipeline, Bliki-Article, 30.5.2013, 
 https://martinfowler.com/bliki/DeploymentPipeline.html , accessed 11.5.2024
 
-Continuous Delivery, Bliki-Article, 30 May 2013, https://martinfowler.com/bliki/ContinuousDelivery.html , accessed 11.5.2024
+(Fowler 2013b):Continuous Delivery, Bliki-Article, 30 May 2013, https://martinfowler.com/bliki/ContinuousDelivery.html , accessed 11.5.2024
+
+(Atlassian/Pittet o.D) Pittet, Sten: Continuous integration vs. delivery vs. deployment. Atlassian w/o date, technical documentation. 
+https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment, accessed 11.5.2024
 
 
+Audio: Hanselminutes Podcast 2 Oct 2012: [Continuous Delivery with Jez Humble and Martin Fowler](https://www.youtube.com/watch?v=CZgYBcOTzAc), accessed 11.5.2024
