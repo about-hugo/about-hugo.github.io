@@ -29,5 +29,6 @@ Tobi Hofmann (Design) and Luis Hankel (Development), see
 | **Overview Sites:**|https://htw-imi-showtime.github.io/|
 | **Production Deployments:** |  are triggered by github releases (on the) |
 
-  image: 
-![](/screenshots/big/)
+
+
+![](/screenshots/big/showtime-website.jpg)
