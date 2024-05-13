@@ -64,15 +64,13 @@ summaryLength = 30
   # enable_anchor_link = true
 
   [params.homepage_meta_tags]
-    meta_description = "Hugo Whisper is a documentation theme built with Hugo."
-    meta_og_title = "Hugo Whisper Theme"
+    meta_description = "About Hugo is a Website to promote the use of SSGs in IT education."
+    meta_og_title = "About Hugo Project"
     meta_og_type = "website"
-    meta_og_url = "https://hugo-whisper.netlify.app"
-    meta_og_image = "https://raw.githubusercontent.com/JugglerX/hugo-whisper-theme/master/images/tn.png"
-    meta_og_description = "Hugo Whisper is a documentation theme built with Hugo."
-    meta_twitter_card = "summary"
-    meta_twitter_site = "@zerostaticio"
-    meta_twitter_creator = "@zerostaticio"
+    meta_og_url = "https://about-hugo.github.io"
+    meta_og_image = ""
+    meta_og_description = "About Hugo Project/Website by B. Kleinen build with hugo and the Whisper Theme"
+
 
   [params.logo]
       mobile = "images/logo-mobile.svg"

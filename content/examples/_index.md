@@ -6,5 +6,5 @@ weight: 1
 
 This is a collection of hugo examples.
 
-The repos can be forked and easily deployed to github, see the [Quickstart](hugo/quick/) instructions.
+The repos can be forked and deployed easily to github pages, see the [Quickstart](/hugo/quick/) guide for instructions.
 

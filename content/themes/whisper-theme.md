@@ -9,6 +9,7 @@ params:
   demo: https://about-hugo.github.io/whisper-theme-tryout/
   theme: https://github.com/zerostaticthemes/hugo-whisper-theme
   theme_fork: https://github.com/about-hugo/hugo-whisper-theme
+  licence: MIT, 
   description: Clean, minimal theme for small documentation sites.
 
 tags: [bootstrap, doc, minimal]
@@ -17,7 +18,6 @@ A sleek, beautiful documentation theme based on bootstrap, which is also
 used for [this page](/sites/about-hugo-github-io/).
 
 <!--more-->
-
 
 ![](/screenshots/big/whisper-theme.jpg)
 
@@ -33,3 +33,8 @@ for larger documentation projects something like geekdoc is probably a better st
 
 
 
+## further notes
+Made by Rob Austin / Zerostatic Themes: 
+https://www.zerostatic.io/
+Guiding Principles:
+https://www.zerostatic.io/about/
