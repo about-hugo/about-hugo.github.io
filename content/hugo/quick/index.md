@@ -6,8 +6,9 @@ weight: 1
 
 ---
 
+## How to Fork a Theme & Deploy it on GH Pages
 You can quickly get started with a deployed site on github by forking
-one of the example sites.
+one of the example sites:
 
 <!--more-->
 
@@ -31,7 +32,8 @@ to enable github pages. You can also trigger a build by pushing to the repo.
 ##### 4. Enable gh pages for your repo
 Go to settings/pages and 
 choose "deploy from branch". To be able to do so, the gh-pages branch must have been
-created beforehand.
+created beforehand. (This can either be done manually or simply by waiting for the first workflow run to complete.)
+
 ![](./deploy-from-branch.jpg)
 
 After this, the page should start to build. To check this, go to the gh actions page. You
